@@ -13,6 +13,7 @@
 		09B9F17A1C7A8E9B00461512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9F1781C7A8E9B00461512 /* Main.storyboard */; };
 		09B9F17C1C7A8E9B00461512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B9F17B1C7A8E9B00461512 /* Assets.xcassets */; };
 		09B9F17F1C7A8E9B00461512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9F17D1C7A8E9B00461512 /* LaunchScreen.storyboard */; };
+		09B9F18B1C7A9CBD00461512 /* UIColor+IOTRemote_Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B9F18A1C7A9CBD00461512 /* UIColor+IOTRemote_Colors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		09B9F17B1C7A8E9B00461512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09B9F17E1C7A8E9B00461512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09B9F1801C7A8E9B00461512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09B9F1891C7A9CBD00461512 /* UIColor+IOTRemote_Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IOTRemote_Colors.h"; sourceTree = "<group>"; };
+		09B9F18A1C7A9CBD00461512 /* UIColor+IOTRemote_Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+IOTRemote_Colors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				09B9F1701C7A8E9B00461512 /* main.m */,
+				09B9F1891C7A9CBD00461512 /* UIColor+IOTRemote_Colors.h */,
+				09B9F18A1C7A9CBD00461512 /* UIColor+IOTRemote_Colors.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			files = (
 				09B9F1771C7A8E9B00461512 /* ViewController.m in Sources */,
 				09B9F1741C7A8E9B00461512 /* AppDelegate.m in Sources */,
+				09B9F18B1C7A9CBD00461512 /* UIColor+IOTRemote_Colors.m in Sources */,
 				09B9F1711C7A8E9B00461512 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
