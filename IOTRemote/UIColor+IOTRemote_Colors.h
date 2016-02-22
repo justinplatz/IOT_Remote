@@ -12,5 +12,9 @@
 
 + (UIColor *)lightYellowColor;
 + (UIColor *)offGrayColor;
-
++ (UIColor *)darkBlueColor;
++ (UIColor *)darkRedColor;
++ (UIColor *)lightGreenColor;
++ (UIColor *)lightBlueColor;
++ (UIColor *)lightOrangeColor;
 @end

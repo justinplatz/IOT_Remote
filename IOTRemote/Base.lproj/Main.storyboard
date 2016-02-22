@@ -97,8 +97,13 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="alertView" destination="S0b-p7-JaW" id="dhp-0I-2ZZ"/>
+                        <outlet property="discoView" destination="AN5-T2-PsU" id="STQ-fH-ESu"/>
+                        <outlet property="fanView" destination="7cM-da-rQA" id="cw5-mM-LyW"/>
                         <outlet property="lightButton" destination="IRb-vq-Ehl" id="U2O-cj-ja6"/>
                         <outlet property="lightView" destination="2Ps-8W-oqt" id="SSd-Ke-CKB"/>
+                        <outlet property="musicView" destination="5uB-su-2Kz" id="tht-C0-IlC"/>
+                        <outlet property="tvView" destination="AHI-br-xUg" id="WVm-am-Qg7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
