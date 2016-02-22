@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface ViewController : UIViewController
 -(void)setAllViewsToGrayBackground;
 -(void)addBordersToViews;
-
+-(void)playClickSound;
+-(void)disableButtonTemporarily:(UIButton*)button;
 @end
 

@@ -19,6 +19,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *lightButton;
 @property (strong, nonatomic) IBOutlet UIButton *alertButton;
+
 @property (nonatomic, assign) BOOL lightIsOn;
 
 @end
@@ -30,7 +31,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.lightIsOn = NO;
     
-    
     self.addBordersToViews;
     self.setAllViewsToGrayBackground;
 }
@@ -41,6 +41,16 @@
 }
 
 
+-(void)playClickSound{
+    NSString *soundTitle = @"click_sound";
+    SystemSoundID soundID;
+    
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:soundTitle ofType:@"mp3"];
+    NSURL *soundUrl = [NSURL fileURLWithPath:soundPath];
+    
+    AudioServicesCreateSystemSoundID ((CFURLRef)CFBridgingRetain(soundUrl), &soundID);
+    AudioServicesPlaySystemSound(soundID);
+}
 -(void)addBordersToViews{
     self.lightView.layer.borderColor = [UIColor lightYellowColor].CGColor;
     self.lightView.layer.borderWidth = 30.0f;
@@ -63,13 +73,14 @@
 
 -(void)setAllViewsToGrayBackground{
     self.lightView.backgroundColor = [UIColor offGrayColor];
-    self.fanView.backgroundColor = [UIColor offGrayColor];
+    self.fanView.backgroundColor   = [UIColor offGrayColor];
     self.musicView.backgroundColor = [UIColor offGrayColor];
     self.alertView.backgroundColor = [UIColor offGrayColor];
-    self.tvView.backgroundColor = [UIColor offGrayColor];
+    self.tvView.backgroundColor    = [UIColor offGrayColor];
     self.discoView.backgroundColor = [UIColor offGrayColor];
 }
 - (IBAction)lightButtonPressed:(id)sender {
+    self.playClickSound;
     if (self.lightIsOn) {
         [self.lightButton setImage:[UIImage imageNamed:@"light_off.png"] forState:UIControlStateNormal];
         self.lightIsOn = NO;
@@ -81,9 +92,22 @@
         self.lightView.backgroundColor = [UIColor lightYellowColor];
     }
 }
+-(void)disableButtonTemporarily{
+    self.alertButton.enabled = NO;
+    self.alertView.backgroundColor = [UIColor darkBlueColor];
+    double delayInSeconds = 3.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds *   NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        self.alertButton.enabled = YES;
+        self.alertView.backgroundColor = [UIColor offGrayColor];
+    });
+}
+
 - (IBAction)alertButtonPressed:(id)sender {
     self.playClickSound;
     self.disableButtonTemporarily;
 }
+
+
 
 @end
