@@ -18,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet UIView *discoView;
 
 @property (strong, nonatomic) IBOutlet UIButton *lightButton;
+@property (strong, nonatomic) IBOutlet UIButton *alertButton;
 @property (nonatomic, assign) BOOL lightIsOn;
 
 @end
@@ -79,6 +80,10 @@
         self.lightIsOn = YES;
         self.lightView.backgroundColor = [UIColor lightYellowColor];
     }
+}
+- (IBAction)alertButtonPressed:(id)sender {
+    self.playClickSound;
+    self.disableButtonTemporarily;
 }
 
 @end
