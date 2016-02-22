@@ -42,22 +42,22 @@
 
 -(void)addBordersToViews{
     self.lightView.layer.borderColor = [UIColor lightYellowColor].CGColor;
-    self.lightView.layer.borderWidth = 50.0f;
+    self.lightView.layer.borderWidth = 30.0f;
     
     self.alertView.layer.borderColor = [UIColor darkBlueColor].CGColor;
-    self.alertView.layer.borderWidth = 50.0f;
+    self.alertView.layer.borderWidth = 30.0f;
     
     self.tvView.layer.borderColor = [UIColor darkRedColor].CGColor;
-    self.tvView.layer.borderWidth = 50.0f;
+    self.tvView.layer.borderWidth = 30.0f;
     
     self.discoView.layer.borderColor = [UIColor lightGreenColor].CGColor;
-    self.discoView.layer.borderWidth = 50.0f;
+    self.discoView.layer.borderWidth = 30.0f;
 
     self.musicView.layer.borderColor = [UIColor lightBlueColor].CGColor;
-    self.musicView.layer.borderWidth = 50.0f;
+    self.musicView.layer.borderWidth = 30.0f;
 
     self.fanView.layer.borderColor = [UIColor lightOrangeColor].CGColor;
-    self.fanView.layer.borderWidth = 50.0f;
+    self.fanView.layer.borderWidth = 30.0f;
 }
 
 -(void)setAllViewsToGrayBackground{
