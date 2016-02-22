@@ -56,7 +56,28 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0b-p7-JaW">
                                 <rect key="frame" x="0.0" y="310" width="200" height="290"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7F-Qx-Hcu">
+                                        <rect key="frame" x="-3" y="0.0" width="207" height="290"/>
+                                        <state key="normal" image="alert"/>
+                                        <connections>
+                                            <action selector="alertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VIu-OG-lPx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.13333333333333333" green="0.42352941176470588" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="G7F-Qx-Hcu" firstAttribute="centerX" secondItem="S0b-p7-JaW" secondAttribute="centerX" id="RTd-ys-MFN"/>
+                                    <constraint firstItem="G7F-Qx-Hcu" firstAttribute="width" secondItem="S0b-p7-JaW" secondAttribute="width" constant="7" id="cMg-pk-CdW"/>
+                                    <constraint firstItem="G7F-Qx-Hcu" firstAttribute="leading" secondItem="S0b-p7-JaW" secondAttribute="leading" constant="-3" id="e04-v4-PFu"/>
+                                    <constraint firstItem="G7F-Qx-Hcu" firstAttribute="centerY" secondItem="S0b-p7-JaW" secondAttribute="centerY" id="hLX-FG-2gh"/>
+                                    <constraint firstItem="G7F-Qx-Hcu" firstAttribute="height" secondItem="S0b-p7-JaW" secondAttribute="height" id="y8x-Ka-zyh"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="e04-v4-PFu"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHI-br-xUg">
                                 <rect key="frame" x="200" y="310" width="200" height="290"/>
@@ -97,6 +118,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="alertButton" destination="G7F-Qx-Hcu" id="hLj-PH-RBD"/>
                         <outlet property="alertView" destination="S0b-p7-JaW" id="dhp-0I-2ZZ"/>
                         <outlet property="discoView" destination="AN5-T2-PsU" id="STQ-fH-ESu"/>
                         <outlet property="fanView" destination="7cM-da-rQA" id="cw5-mM-LyW"/>
@@ -112,6 +134,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="alert" width="153" height="177"/>
         <image name="light_off" width="113" height="178"/>
     </resources>
 </document>
