@@ -116,6 +116,18 @@
     self.disableButtonTemporarily;
 }
 
+- (IBAction)fanButtonPressed:(id)sender {
+    self.playClickSound;
+    if (self.fanIsOn) {
+        self.fanIsOn = NO;
+        self.fanView.backgroundColor = [UIColor offGrayColor];
+    }
+    else{
+        self.fanIsOn = YES;
+        self.fanView.backgroundColor = [UIColor lightOrangeColor];
+    }
+}
+
 
 
 @end
