@@ -48,11 +48,41 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uB-su-2Kz">
                                 <rect key="frame" x="400" y="20" width="200" height="290"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7r-yG-ipY">
+                                        <rect key="frame" x="44" y="75" width="113" height="140"/>
+                                        <state key="normal" image="music"/>
+                                        <connections>
+                                            <action selector="musicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Mg-Zj-QZM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.10196078431372549" green="0.7803921568627451" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="l7r-yG-ipY" firstAttribute="height" secondItem="5uB-su-2Kz" secondAttribute="height" constant="-150" id="2D0-yx-7v7"/>
+                                    <constraint firstItem="l7r-yG-ipY" firstAttribute="width" secondItem="5uB-su-2Kz" secondAttribute="width" constant="-87" id="F65-XC-6jo"/>
+                                    <constraint firstItem="l7r-yG-ipY" firstAttribute="centerX" secondItem="5uB-su-2Kz" secondAttribute="centerX" id="RW1-iQ-brv"/>
+                                    <constraint firstItem="l7r-yG-ipY" firstAttribute="centerY" secondItem="5uB-su-2Kz" secondAttribute="centerY" id="aPm-ne-hm2"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AN5-T2-PsU">
                                 <rect key="frame" x="400" y="310" width="200" height="290"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6j-GC-bw7">
+                                        <rect key="frame" x="15" y="56" width="171" height="177"/>
+                                        <state key="normal" image="disco"/>
+                                        <connections>
+                                            <action selector="discoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r0P-e7-ukc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.17254901960784313" green="0.77254901960784317" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="y6j-GC-bw7" firstAttribute="centerY" secondItem="AN5-T2-PsU" secondAttribute="centerY" id="9Hu-gU-98h"/>
+                                    <constraint firstItem="y6j-GC-bw7" firstAttribute="centerX" secondItem="AN5-T2-PsU" secondAttribute="centerX" id="J5t-mX-YQx"/>
+                                    <constraint firstItem="y6j-GC-bw7" firstAttribute="height" secondItem="AN5-T2-PsU" secondAttribute="height" constant="-113" id="aAM-2r-Bek"/>
+                                    <constraint firstItem="y6j-GC-bw7" firstAttribute="width" secondItem="AN5-T2-PsU" secondAttribute="width" constant="-29" id="ich-iJ-SZB"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0b-p7-JaW">
                                 <rect key="frame" x="0.0" y="310" width="200" height="290"/>
@@ -81,17 +111,42 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHI-br-xUg">
                                 <rect key="frame" x="200" y="310" width="200" height="290"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ys-68-dgb">
+                                        <rect key="frame" x="15" y="82" width="171" height="125"/>
+                                        <state key="normal" image="tv"/>
+                                        <connections>
+                                            <action selector="tvButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ye9-Nf-1JL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.59607843137254901" green="0.14117647058823529" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="6ys-68-dgb" firstAttribute="width" secondItem="AHI-br-xUg" secondAttribute="width" constant="-29" id="OC5-LT-URf"/>
+                                    <constraint firstItem="6ys-68-dgb" firstAttribute="centerX" secondItem="AHI-br-xUg" secondAttribute="centerX" id="UdY-07-gUM"/>
+                                    <constraint firstItem="6ys-68-dgb" firstAttribute="height" secondItem="AHI-br-xUg" secondAttribute="height" constant="-165" id="c6p-3G-wze"/>
+                                    <constraint firstItem="6ys-68-dgb" firstAttribute="centerY" secondItem="AHI-br-xUg" secondAttribute="centerY" id="qRy-37-vJx"/>
+                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8d0-ab-PV5">
+                                <rect key="frame" x="224" y="69" width="153" height="192"/>
+                                <state key="normal" image="fan"/>
+                                <connections>
+                                    <action selector="fanButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fSN-DF-6fk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7cM-da-rQA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3C3-Q2-jMA"/>
+                            <constraint firstItem="8d0-ab-PV5" firstAttribute="height" secondItem="7cM-da-rQA" secondAttribute="height" constant="-98" id="43R-Dx-EOv"/>
+                            <constraint firstItem="8d0-ab-PV5" firstAttribute="width" secondItem="7cM-da-rQA" secondAttribute="width" constant="-47" id="5Pv-ZV-ZJL"/>
                             <constraint firstItem="AHI-br-xUg" firstAttribute="leading" secondItem="7cM-da-rQA" secondAttribute="leading" id="6C9-08-mWA"/>
                             <constraint firstItem="S0b-p7-JaW" firstAttribute="height" secondItem="AHI-br-xUg" secondAttribute="height" id="7sM-op-v2F"/>
                             <constraint firstItem="AHI-br-xUg" firstAttribute="width" secondItem="7cM-da-rQA" secondAttribute="width" id="85z-1d-Uhl"/>
                             <constraint firstItem="AHI-br-xUg" firstAttribute="height" secondItem="7cM-da-rQA" secondAttribute="height" id="8QX-ul-r5y"/>
                             <constraint firstItem="2Ps-8W-oqt" firstAttribute="width" secondItem="S0b-p7-JaW" secondAttribute="width" id="IAn-XW-faG"/>
+                            <constraint firstItem="8d0-ab-PV5" firstAttribute="centerX" secondItem="7cM-da-rQA" secondAttribute="centerX" id="MAS-lm-hGI"/>
                             <constraint firstItem="S0b-p7-JaW" firstAttribute="width" secondItem="AHI-br-xUg" secondAttribute="width" id="NM6-hU-K22"/>
                             <constraint firstAttribute="trailing" secondItem="AN5-T2-PsU" secondAttribute="trailing" id="O3h-uX-MZG"/>
                             <constraint firstItem="2Ps-8W-oqt" firstAttribute="leading" secondItem="S0b-p7-JaW" secondAttribute="leading" id="OT7-r8-c84"/>
@@ -99,6 +154,7 @@
                             <constraint firstItem="2Ps-8W-oqt" firstAttribute="height" secondItem="7cM-da-rQA" secondAttribute="height" id="RMC-xQ-KGB"/>
                             <constraint firstItem="2Ps-8W-oqt" firstAttribute="top" secondItem="7cM-da-rQA" secondAttribute="top" id="SLI-ru-UZD"/>
                             <constraint firstItem="AN5-T2-PsU" firstAttribute="leading" secondItem="5uB-su-2Kz" secondAttribute="leading" id="WbN-lF-kD4"/>
+                            <constraint firstItem="8d0-ab-PV5" firstAttribute="centerY" secondItem="7cM-da-rQA" secondAttribute="centerY" id="ZAp-bY-yPo"/>
                             <constraint firstItem="AHI-br-xUg" firstAttribute="width" secondItem="AN5-T2-PsU" secondAttribute="width" id="a5E-cT-dCG"/>
                             <constraint firstItem="S0b-p7-JaW" firstAttribute="top" secondItem="AHI-br-xUg" secondAttribute="top" id="adq-Ou-LFq"/>
                             <constraint firstItem="2Ps-8W-oqt" firstAttribute="height" secondItem="S0b-p7-JaW" secondAttribute="height" id="c1Q-Fv-jHr"/>
@@ -120,11 +176,15 @@
                     <connections>
                         <outlet property="alertButton" destination="G7F-Qx-Hcu" id="hLj-PH-RBD"/>
                         <outlet property="alertView" destination="S0b-p7-JaW" id="dhp-0I-2ZZ"/>
+                        <outlet property="discoButton" destination="y6j-GC-bw7" id="kMb-gh-zSk"/>
                         <outlet property="discoView" destination="AN5-T2-PsU" id="STQ-fH-ESu"/>
+                        <outlet property="fanButton" destination="8d0-ab-PV5" id="tbd-wR-SbI"/>
                         <outlet property="fanView" destination="7cM-da-rQA" id="cw5-mM-LyW"/>
                         <outlet property="lightButton" destination="IRb-vq-Ehl" id="U2O-cj-ja6"/>
                         <outlet property="lightView" destination="2Ps-8W-oqt" id="SSd-Ke-CKB"/>
+                        <outlet property="musicButton" destination="l7r-yG-ipY" id="9oD-ek-odS"/>
                         <outlet property="musicView" destination="5uB-su-2Kz" id="tht-C0-IlC"/>
+                        <outlet property="tvButton" destination="6ys-68-dgb" id="HdX-8x-Z1d"/>
                         <outlet property="tvView" destination="AHI-br-xUg" id="WVm-am-Qg7"/>
                     </connections>
                 </viewController>
@@ -135,6 +195,10 @@
     </scenes>
     <resources>
         <image name="alert" width="153" height="177"/>
+        <image name="disco" width="171" height="177"/>
+        <image name="fan" width="153" height="192"/>
         <image name="light_off" width="113" height="178"/>
+        <image name="music" width="206" height="210"/>
+        <image name="tv" width="219" height="156"/>
     </resources>
 </document>
