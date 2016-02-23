@@ -36,6 +36,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.lightIsOn = NO;
+    self.fanButton = NO;
+    self.discoIsOn = NO;
     
     self.addBordersToViews;
     self.setAllViewsToGrayBackground;
