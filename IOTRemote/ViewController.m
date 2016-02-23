@@ -128,6 +128,17 @@
     }
 }
 
+- (IBAction)discoButtonPressed:(id)sender {
+    self.playClickSound;
+    if (self.discoIsOn) {
+        self.discoIsOn = NO;
+        self.discoView.backgroundColor = [UIColor offGrayColor];
+    }
+    else{
+        self.discoIsOn = YES;
+        self.discoView.backgroundColor = [UIColor lightGreenColor];
+    }
+}
 
 
 @end
