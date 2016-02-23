@@ -25,6 +25,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *discoButton;
 
 @property (nonatomic, assign) BOOL lightIsOn;
+@property (nonatomic, assign) BOOL fanIsOn;
+@property (nonatomic, assign) BOOL discoIsOn;
 
 @end
 
