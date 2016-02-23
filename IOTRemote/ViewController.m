@@ -128,6 +128,13 @@
     }
 }
 
+- (IBAction)tvButtonPressed:(id)sender {
+    
+}
+
+- (IBAction)musicButtonPressed:(id)sender {
+    
+}
 - (IBAction)discoButtonPressed:(id)sender {
     self.playClickSound;
     if (self.discoIsOn) {
