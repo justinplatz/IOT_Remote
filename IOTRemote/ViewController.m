@@ -19,6 +19,10 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *lightButton;
 @property (strong, nonatomic) IBOutlet UIButton *alertButton;
+@property (strong, nonatomic) IBOutlet UIButton *fanButton;
+@property (strong, nonatomic) IBOutlet UIButton *tvButton;
+@property (strong, nonatomic) IBOutlet UIButton *musicButton;
+@property (strong, nonatomic) IBOutlet UIButton *discoButton;
 
 @property (nonatomic, assign) BOOL lightIsOn;
 
