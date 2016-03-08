@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <PubNub/PubNub.h>
 
 @interface ViewController : UIViewController
 -(void)setAllViewsToGrayBackground;
 -(void)addBordersToViews;
 -(void)playClickSound;
--(void)disableButtonTemporarily:(UIButton*)button;
+-(void)disableButtonTemporarily;
+@property (nonatomic) PubNub *client;
 @end
 
