@@ -28,6 +28,9 @@
 @property (nonatomic, assign) BOOL lightIsOn;
 @property (nonatomic, assign) BOOL fanIsOn;
 @property (nonatomic, assign) BOOL discoIsOn;
+@property (nonatomic, assign) NSTimer* timer;
+@property(nonatomic) CFTimeInterval minimumPressDuration;
+
 
 @end
 
@@ -134,9 +137,49 @@
 }
 
 - (IBAction)alertButtonPressed:(id)sender {
+<<<<<<< HEAD
+   // self.playClickSound;
+    //self.disableButtonTemporarily;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(buttonDidLongPress:)];
+    [self.alertButton addGestureRecognizer:longPress];
+    longPress.minimumPressDuration = 5.0;//this is the pressDuration
+=======
     [self playClickSound];
     [self disableButtonTemporarily];
+>>>>>>> master
 }
+
+- (void)buttonDidLongPress:(UILongPressGestureRecognizer*)gesture
+{
+    switch (gesture.state) {
+        case UIGestureRecognizerStateBegan:
+        {
+            
+            self.timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(alertButtonPressed:) userInfo:nil repeats:YES];
+            
+            NSRunLoop * theRunLoop = [NSRunLoop currentRunLoop];
+            [theRunLoop addTimer:self.timer forMode:NSDefaultRunLoopMode];
+            self.playClickSound;
+            self.disableButtonTemporarily;
+
+        }
+            break;
+        case UIGestureRecognizerStateEnded:
+        {
+            [self.timer invalidate];
+            self.timer = nil;
+            
+        }
+            break;
+        default:
+            break;
+    }
+}
+
 
 - (IBAction)fanButtonPressed:(id)sender {
     [self playClickSound];
