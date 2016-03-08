@@ -17,8 +17,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    PNConfiguration *configuration = [
+                                      PNConfiguration configurationWithPublishKey:@"pub-c-f83b8b34-5dbc-4502-ac34-5073f2382d96"
+                                      subscribeKey:@"sub-c-34be47b2-f776-11e4-b559-0619f8945a4f"];
+    
+    self.client = [PubNub clientWithConfiguration:configuration];
+    [self.client addListener:self];
+    [self.client subscribeToChannels: @[@"light_channel"] withPresence:NO];
+    
     return YES;
 }
+
+- (void)client:(PubNub *)client didReceiveMessage:(PNMessageResult *)message {
+    
+    NSLog(@"Received message: %@ on channel %@ at %@", message.data.message,
+          message.data.subscribedChannel, message.data.timetoken);
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

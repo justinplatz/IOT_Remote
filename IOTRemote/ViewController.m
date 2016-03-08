@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIColor+IOTRemote_Colors.h"
+#import <PubNub/PubNub.h>
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UIView *lightView;
@@ -33,7 +34,7 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController : UIViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,8 +42,19 @@
     self.fanButton = NO;
     self.discoIsOn = NO;
     
-    self.addBordersToViews;
-    self.setAllViewsToGrayBackground;
+    
+    [self addBordersToViews];
+    [self setAllViewsToGrayBackground];
+    
+    
+    // Override point for customization after application launch.
+    PNConfiguration *configuration = [
+                                      PNConfiguration configurationWithPublishKey:@"pub-c-f83b8b34-5dbc-4502-ac34-5073f2382d96"
+                                      subscribeKey:@"sub-c-34be47b2-f776-11e4-b559-0619f8945a4f"];
+    
+    self.client = [PubNub clientWithConfiguration:configuration];
+    [self.client addListener:self];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,6 +73,7 @@
     AudioServicesCreateSystemSoundID ((CFURLRef)CFBridgingRetain(soundUrl), &soundID);
     AudioServicesPlaySystemSound(soundID);
 }
+
 -(void)addBordersToViews{
     self.lightView.layer.borderColor = [UIColor lightYellowColor].CGColor;
     self.lightView.layer.borderWidth = 30.0f;
@@ -89,8 +102,13 @@
     self.tvView.backgroundColor    = [UIColor offGrayColor];
     self.discoView.backgroundColor = [UIColor offGrayColor];
 }
+
 - (IBAction)lightButtonPressed:(id)sender {
-    self.playClickSound;
+    [self playClickSound];
+    [self.client publish:@"Test" toChannel: @"light_channel" storeInHistory:YES
+          withCompletion:nil];
+    
+    
     if (self.lightIsOn) {
         [self.lightButton setImage:[UIImage imageNamed:@"light_off.png"] forState:UIControlStateNormal];
         self.lightIsOn = NO;
@@ -102,18 +120,24 @@
         self.lightView.backgroundColor = [UIColor lightYellowColor];
     }
 }
+
 -(void)disableButtonTemporarily{
     self.alertButton.enabled = NO;
+    [self.alertButton setImage:[UIImage imageNamed:@"alert_on.png"] forState:UIControlStateNormal];
+
     self.alertView.backgroundColor = [UIColor darkBlueColor];
     double delayInSeconds = 3.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds *   NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         self.alertButton.enabled = YES;
         self.alertView.backgroundColor = [UIColor offGrayColor];
+        [self.alertButton setImage:[UIImage imageNamed:@"alert_off.png"] forState:UIControlStateNormal];
+
     });
 }
 
 - (IBAction)alertButtonPressed:(id)sender {
+<<<<<<< HEAD
    // self.playClickSound;
     //self.disableButtonTemporarily;
 }
@@ -123,6 +147,10 @@
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(buttonDidLongPress:)];
     [self.alertButton addGestureRecognizer:longPress];
     longPress.minimumPressDuration = 5.0;//this is the pressDuration
+=======
+    [self playClickSound];
+    [self disableButtonTemporarily];
+>>>>>>> master
 }
 
 - (void)buttonDidLongPress:(UILongPressGestureRecognizer*)gesture
@@ -154,12 +182,14 @@
 
 
 - (IBAction)fanButtonPressed:(id)sender {
-    self.playClickSound;
+    [self playClickSound];
     if (self.fanIsOn) {
+        [self.fanButton setImage:[UIImage imageNamed:@"fan_off.png"] forState:UIControlStateNormal];
         self.fanIsOn = NO;
         self.fanView.backgroundColor = [UIColor offGrayColor];
     }
     else{
+        [self.fanButton setImage:[UIImage imageNamed:@"fan_on.png"] forState:UIControlStateNormal];
         self.fanIsOn = YES;
         self.fanView.backgroundColor = [UIColor lightOrangeColor];
     }
@@ -172,13 +202,16 @@
 - (IBAction)musicButtonPressed:(id)sender {
     
 }
+
 - (IBAction)discoButtonPressed:(id)sender {
-    self.playClickSound;
+    [self playClickSound];
     if (self.discoIsOn) {
+        [self.discoButton setImage:[UIImage imageNamed:@"disco_off.png"] forState:UIControlStateNormal];
         self.discoIsOn = NO;
         self.discoView.backgroundColor = [UIColor offGrayColor];
     }
     else{
+        [self.discoButton setImage:[UIImage imageNamed:@"disco_on.png"] forState:UIControlStateNormal];
         self.discoIsOn = YES;
         self.discoView.backgroundColor = [UIColor lightGreenColor];
     }

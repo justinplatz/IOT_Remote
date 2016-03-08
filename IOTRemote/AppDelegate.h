@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <PubNub/PubNub.h>
 
+#import "ViewController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
 @property (strong, nonatomic) UIWindow *window;
-
-
+@property (nonatomic) PubNub *client;
 @end
 

@@ -12,7 +12,7 @@
 
 + (UIColor *)lightYellowColor
 {
-    return [UIColor colorWithRed:0.922 green:0.918 blue:0.612 alpha:1]; /*#ebea9c*/
+    return [UIColor colorWithRed:0.945 green:0.769 blue:0.059 alpha:1]; /*#f1c40f*/
 }
 
 + (UIColor *)darkBlueColor
