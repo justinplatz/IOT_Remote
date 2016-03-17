@@ -137,7 +137,6 @@
 }
 
 - (IBAction)alertButtonPressed:(id)sender {
-<<<<<<< HEAD
    // self.playClickSound;
     //self.disableButtonTemporarily;
 }
@@ -145,12 +144,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(buttonDidLongPress:)];
+    longPress.minimumPressDuration = 2.0;//this is the pressDuration
+    
     [self.alertButton addGestureRecognizer:longPress];
-    longPress.minimumPressDuration = 5.0;//this is the pressDuration
-=======
-    [self playClickSound];
-    [self disableButtonTemporarily];
->>>>>>> master
 }
 
 - (void)buttonDidLongPress:(UILongPressGestureRecognizer*)gesture
@@ -163,9 +159,8 @@
             
             NSRunLoop * theRunLoop = [NSRunLoop currentRunLoop];
             [theRunLoop addTimer:self.timer forMode:NSDefaultRunLoopMode];
-            self.playClickSound;
-            self.disableButtonTemporarily;
-
+            [self playClickSound];
+            [self disableButtonTemporarily];
         }
             break;
         case UIGestureRecognizerStateEnded:
