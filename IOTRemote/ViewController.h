@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <PubNub/PubNub.h>
+#import <AFNetworking/AFNetworking.h>
+
 
 @interface ViewController : UIViewController
 -(void)setAllViewsToGrayBackground;
 -(void)addBordersToViews;
 -(void)playClickSound;
 -(void)disableButtonTemporarily;
+-(void)sendMessage;
+
 @property (nonatomic) PubNub *client;
 @end
 

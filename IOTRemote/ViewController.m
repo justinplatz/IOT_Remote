@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "UIColor+IOTRemote_Colors.h"
 #import <PubNub/PubNub.h>
+#import "AFHTTPRequestOperationManager.h"
+
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UIView *lightView;
@@ -149,6 +151,40 @@
     [self.alertButton addGestureRecognizer:longPress];
 }
 
+- (void)sendMessage{
+    NSString *kTwilioSID = @"ACf47ab7021aa158498f4fdb0bfc7685cb";
+    NSString *kTwilioSecret = @"643e1be96d15f39bcc7f55cd92ef35c8";
+    NSString *kFromNumber = @"+17084773770";
+    NSString *kToNumber = @"+17737322324";//replace you number here
+    NSString *kMessage = @"Tommy needs help!";
+    
+    NSString *urlString = [NSString
+                           stringWithFormat:@"https://%@:%@@api.twilio.com/2010-04-01/Accounts/%@/SMS/Messages/",
+                           kTwilioSID, kTwilioSecret,kTwilioSID];
+    
+    NSDictionary* dic=@{@"From":kFromNumber,@"To":kToNumber,@"Body":kMessage};
+    
+    __block NSArray* jsonArray;
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"application/xml"];
+    [manager POST:urlString parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         NSError* err;
+         NSLog(@"success %@",[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+         jsonArray=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments
+                                                     error:&err];
+         NSLog(@"JSON: %@", jsonArray);
+         
+         
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         NSLog(@"Error: %@, %@", error, operation.responseObject);
+     }];
+    
+}
+
+
 - (void)buttonDidLongPress:(UILongPressGestureRecognizer*)gesture
 {
     switch (gesture.state) {
@@ -161,6 +197,8 @@
             [theRunLoop addTimer:self.timer forMode:NSDefaultRunLoopMode];
             [self playClickSound];
             [self disableButtonTemporarily];
+            [self sendMessage];
+
         }
             break;
         case UIGestureRecognizerStateEnded:
