@@ -18,6 +18,7 @@
 -(void)playClickSound;
 -(void)disableButtonTemporarily;
 -(void)sendMessage;
+-(void)turnLight;
 
 @property (nonatomic) PubNub *client;
 @end
