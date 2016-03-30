@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "YO/YO.h"
 #import "UIColor+IOTRemote_Colors.h"
 #import <PubNub/PubNub.h>
 
@@ -54,6 +55,10 @@
     
     self.client = [PubNub clientWithConfiguration:configuration];
     [self.client addListener:self];
+    
+    // Put your APIKey
+    NSString *APIKey = @"7e687c42-00a4-488b-bec0-614eca45bf75";
+    [YO startWithAPIKey:APIKey];
     
 }
 
@@ -107,6 +112,9 @@
     [self playClickSound];
     [self.client publish:@"Test" toChannel: @"light_channel" storeInHistory:YES
           withCompletion:nil];
+    
+    // Yo Individual Usernames
+    [YO sendYOToIndividualUser:@"IFTTT"];
     
     
     if (self.lightIsOn) {
