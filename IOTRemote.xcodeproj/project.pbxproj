@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092668FE1CA1970E004671CB /* YO in Resources */ = {isa = PBXBuildFile; fileRef = 092668FD1CA1970E004671CB /* YO */; };
+		092669021CA19763004671CB /* YO.m in Sources */ = {isa = PBXBuildFile; fileRef = 092669011CA19763004671CB /* YO.m */; };
+		0987AEBA1CAC41D100015565 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0987AEB91CAC41D100015565 /* CoreMedia.framework */; };
+		0987AEBC1CAC41DE00015565 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0987AEBB1CAC41DE00015565 /* AudioToolbox.framework */; };
+		0987AEBE1CAC41E400015565 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0987AEBD1CAC41E400015565 /* AVFoundation.framework */; };
+		0987AEC01CAC41EE00015565 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0987AEBF1CAC41EE00015565 /* MediaPlayer.framework */; };
 		09B9F1711C7A8E9B00461512 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B9F1701C7A8E9B00461512 /* main.m */; };
 		09B9F1741C7A8E9B00461512 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B9F1731C7A8E9B00461512 /* AppDelegate.m */; };
 		09B9F1771C7A8E9B00461512 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B9F1761C7A8E9B00461512 /* ViewController.m */; };
@@ -19,6 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		092668F91CA19688004671CB /* YO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = YO.m; path = IOTRemote/YO/YO.m; sourceTree = "<group>"; };
+		092668FB1CA196A3004671CB /* YO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = YO.h; path = IOTRemote/YO/YO.h; sourceTree = "<group>"; };
+		092668FD1CA1970E004671CB /* YO */ = {isa = PBXFileReference; lastKnownFileType = folder; path = YO; sourceTree = "<group>"; };
+		092669011CA19763004671CB /* YO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YO.m; sourceTree = "<group>"; };
+		0987AEB91CAC41D100015565 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0987AEBB1CAC41DE00015565 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0987AEBD1CAC41E400015565 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0987AEBF1CAC41EE00015565 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		09B9F16C1C7A8E9B00461512 /* IOTRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOTRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B9F1701C7A8E9B00461512 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		09B9F1721C7A8E9B00461512 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +56,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0987AEC01CAC41EE00015565 /* MediaPlayer.framework in Frameworks */,
+				0987AEBE1CAC41E400015565 /* AVFoundation.framework in Frameworks */,
+				0987AEBC1CAC41DE00015565 /* AudioToolbox.framework in Frameworks */,
+				0987AEBA1CAC41D100015565 /* CoreMedia.framework in Frameworks */,
 				B271AB505B2A59FCB299D792 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +70,7 @@
 		09B9F1631C7A8E9B00461512 = {
 			isa = PBXGroup;
 			children = (
+				092669011CA19763004671CB /* YO.m */,
 				09B9F16E1C7A8E9B00461512 /* IOTRemote */,
 				09B9F16D1C7A8E9B00461512 /* Products */,
 				A834790CF4FE49391C366105 /* Pods */,
@@ -70,6 +89,7 @@
 		09B9F16E1C7A8E9B00461512 /* IOTRemote */ = {
 			isa = PBXGroup;
 			children = (
+				092668FD1CA1970E004671CB /* YO */,
 				09F8CF151C7B640D008A199A /* click_sound.mp3 */,
 				09B9F1721C7A8E9B00461512 /* AppDelegate.h */,
 				09B9F1731C7A8E9B00461512 /* AppDelegate.m */,
@@ -106,6 +126,12 @@
 		D6C1764FD581717E9F27CD1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0987AEBF1CAC41EE00015565 /* MediaPlayer.framework */,
+				0987AEBD1CAC41E400015565 /* AVFoundation.framework */,
+				0987AEBB1CAC41DE00015565 /* AudioToolbox.framework */,
+				0987AEB91CAC41D100015565 /* CoreMedia.framework */,
+				092668FB1CA196A3004671CB /* YO.h */,
+				092668F91CA19688004671CB /* YO.m */,
 				28A950E0AA6E74298BB5BD09 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -173,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09B9F17F1C7A8E9B00461512 /* LaunchScreen.storyboard in Resources */,
+				092668FE1CA1970E004671CB /* YO in Resources */,
 				09F8CF141C7B6378008A199A /* Assets.xcassets in Resources */,
 				09B9F17A1C7A8E9B00461512 /* Main.storyboard in Resources */,
 				09F8CF161C7B640D008A199A /* click_sound.mp3 in Resources */,
@@ -234,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				092669021CA19763004671CB /* YO.m in Sources */,
 				09B9F1771C7A8E9B00461512 /* ViewController.m in Sources */,
 				09B9F1741C7A8E9B00461512 /* AppDelegate.m in Sources */,
 				09B9F18B1C7A9CBD00461512 /* UIColor+IOTRemote_Colors.m in Sources */,
