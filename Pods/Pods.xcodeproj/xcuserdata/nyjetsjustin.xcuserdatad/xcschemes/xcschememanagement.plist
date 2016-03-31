@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>CocoaLumberjack.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>19B544C38D26DEAD4F353807D3E7594D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3FB568206C7E54F343DDD58693889ED1</key>
+		<key>00735911A5E3A6B5A08A83504B1CB615</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>8A2E8FED01C8A6BC8ADFCF3C3B78368F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B286CFB596E825789E1F8EB8CC60D96D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C91A46012F8822DFDBAC8BC32FCC9001</key>
 		<dict>
 			<key>primary</key>
 			<true/>

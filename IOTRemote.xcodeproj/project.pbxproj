@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090ADC2B1CAC438C003DC3FB /* GVMusicPlayerController in Resources */ = {isa = PBXBuildFile; fileRef = 090ADC2A1CAC438C003DC3FB /* GVMusicPlayerController */; };
+		090ADC2E1CAC43C9003DC3FB /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 090ADC2D1CAC43C9003DC3FB /* MusicViewController.m */; };
+		090ADC301CAC4C56003DC3FB /* YO.m in Sources */ = {isa = PBXBuildFile; fileRef = 090ADC2F1CAC4C56003DC3FB /* YO.m */; };
+		090ADC321CAC4C5B003DC3FB /* GVMusicPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 090ADC311CAC4C5B003DC3FB /* GVMusicPlayerController.m */; };
 		092668FE1CA1970E004671CB /* YO in Resources */ = {isa = PBXBuildFile; fileRef = 092668FD1CA1970E004671CB /* YO */; };
-		092669021CA19763004671CB /* YO.m in Sources */ = {isa = PBXBuildFile; fileRef = 092669011CA19763004671CB /* YO.m */; };
 		0987AEBA1CAC41D100015565 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0987AEB91CAC41D100015565 /* CoreMedia.framework */; };
 		0987AEBC1CAC41DE00015565 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0987AEBB1CAC41DE00015565 /* AudioToolbox.framework */; };
 		0987AEBE1CAC41E400015565 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0987AEBD1CAC41E400015565 /* AVFoundation.framework */; };
@@ -25,10 +28,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		090ADC2A1CAC438C003DC3FB /* GVMusicPlayerController */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GVMusicPlayerController; sourceTree = "<group>"; };
+		090ADC2C1CAC43C9003DC3FB /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
+		090ADC2D1CAC43C9003DC3FB /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
+		090ADC2F1CAC4C56003DC3FB /* YO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YO.m; path = YO/YO.m; sourceTree = "<group>"; };
+		090ADC311CAC4C5B003DC3FB /* GVMusicPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GVMusicPlayerController.m; path = GVMusicPlayerController/GVMusicPlayerController.m; sourceTree = "<group>"; };
 		092668F91CA19688004671CB /* YO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = YO.m; path = IOTRemote/YO/YO.m; sourceTree = "<group>"; };
 		092668FB1CA196A3004671CB /* YO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = YO.h; path = IOTRemote/YO/YO.h; sourceTree = "<group>"; };
 		092668FD1CA1970E004671CB /* YO */ = {isa = PBXFileReference; lastKnownFileType = folder; path = YO; sourceTree = "<group>"; };
-		092669011CA19763004671CB /* YO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YO.m; sourceTree = "<group>"; };
 		0987AEB91CAC41D100015565 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		0987AEBB1CAC41DE00015565 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0987AEBD1CAC41E400015565 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -70,7 +77,6 @@
 		09B9F1631C7A8E9B00461512 = {
 			isa = PBXGroup;
 			children = (
-				092669011CA19763004671CB /* YO.m */,
 				09B9F16E1C7A8E9B00461512 /* IOTRemote */,
 				09B9F16D1C7A8E9B00461512 /* Products */,
 				A834790CF4FE49391C366105 /* Pods */,
@@ -89,6 +95,9 @@
 		09B9F16E1C7A8E9B00461512 /* IOTRemote */ = {
 			isa = PBXGroup;
 			children = (
+				090ADC2F1CAC4C56003DC3FB /* YO.m */,
+				090ADC311CAC4C5B003DC3FB /* GVMusicPlayerController.m */,
+				090ADC2A1CAC438C003DC3FB /* GVMusicPlayerController */,
 				092668FD1CA1970E004671CB /* YO */,
 				09F8CF151C7B640D008A199A /* click_sound.mp3 */,
 				09B9F1721C7A8E9B00461512 /* AppDelegate.h */,
@@ -100,6 +109,8 @@
 				09B9F1801C7A8E9B00461512 /* Info.plist */,
 				09F8CF131C7B6377008A199A /* Assets.xcassets */,
 				09B9F16F1C7A8E9B00461512 /* Supporting Files */,
+				090ADC2C1CAC43C9003DC3FB /* MusicViewController.h */,
+				090ADC2D1CAC43C9003DC3FB /* MusicViewController.m */,
 			);
 			path = IOTRemote;
 			sourceTree = "<group>";
@@ -200,6 +211,7 @@
 			files = (
 				09B9F17F1C7A8E9B00461512 /* LaunchScreen.storyboard in Resources */,
 				092668FE1CA1970E004671CB /* YO in Resources */,
+				090ADC2B1CAC438C003DC3FB /* GVMusicPlayerController in Resources */,
 				09F8CF141C7B6378008A199A /* Assets.xcassets in Resources */,
 				09B9F17A1C7A8E9B00461512 /* Main.storyboard in Resources */,
 				09F8CF161C7B640D008A199A /* click_sound.mp3 in Resources */,
@@ -261,11 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				092669021CA19763004671CB /* YO.m in Sources */,
 				09B9F1771C7A8E9B00461512 /* ViewController.m in Sources */,
+				090ADC301CAC4C56003DC3FB /* YO.m in Sources */,
+				090ADC321CAC4C5B003DC3FB /* GVMusicPlayerController.m in Sources */,
 				09B9F1741C7A8E9B00461512 /* AppDelegate.m in Sources */,
 				09B9F18B1C7A9CBD00461512 /* UIColor+IOTRemote_Colors.m in Sources */,
 				09B9F1711C7A8E9B00461512 /* main.m in Sources */,
+				090ADC2E1CAC43C9003DC3FB /* MusicViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
