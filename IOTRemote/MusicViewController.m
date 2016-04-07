@@ -9,6 +9,9 @@
 #import "MusicViewController.h"
 #import "GVMusicPlayerController/GVMusicPlayerController.h"
 #import "UIColor+IOTRemote_Colors.h"
+#import <AVFoundation/AVFoundation.h>
+#import "NSString+TimeToString.h"
+
 @interface MusicViewController ()
 
 @property (strong, nonatomic) IBOutlet UIView *backwardView;
@@ -25,9 +28,16 @@
 @property (strong, nonatomic) IBOutlet UIImageView *songImageView;
 
 @property (strong, nonatomic) IBOutlet UIButton *playPauseButton;
+@property (strong, nonatomic) IBOutlet UILabel *songLabel;
+@property (strong, nonatomic) IBOutlet UILabel *artistLabel;
 
-@property (nonatomic, assign) BOOL songIsPlaying;
+@property (strong, nonatomic) IBOutlet UILabel *trackCurrentPlaybackTimeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *trackLengthLabel;
+@property (strong, nonatomic) IBOutlet UISlider *progressSlider;
 
+@property (nonatomic, assign) MPMediaItem *nowPlayingSong;
+@property BOOL panningProgress;
+@property (strong, nonatomic) NSTimer *timer;
 
 @end
 
@@ -37,11 +47,17 @@
     [super viewDidLoad];
     [self addBordersToViews];
     
+    self.nowPlayingSong = [[GVMusicPlayerController sharedInstance] nowPlayingItem];
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timedJob) userInfo:nil repeats:YES];
+    [self.timer fire];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [[GVMusicPlayerController sharedInstance] addDelegate:self];
+    [GVMusicPlayerController sharedInstance].repeatMode = MPMusicRepeatModeAll;
+    [self setAlbumArt:[[GVMusicPlayerController sharedInstance] nowPlayingItem]];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -49,33 +65,44 @@
     [super viewDidDisappear:animated];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
+    [self resignFirstResponder];
+    [super viewWillDisappear:animated];
+}
+
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)receivedEvent {
+    [[GVMusicPlayerController sharedInstance] remoteControlReceivedWithEvent:receivedEvent];
+}
+
 -(void)addBordersToViews{
-    self.backwardView.layer.borderColor = [UIColor lightYellowColor].CGColor;
-    self.backwardView.layer.borderWidth = 20.0f;
+    self.backwardView.layer.backgroundColor = [UIColor lightYellowColor].CGColor;
     
-    self.playpauseView.layer.borderColor = [UIColor darkBlueColor].CGColor;
-    self.playpauseView.layer.borderWidth = 20.0f;
+    self.playpauseView.layer.backgroundColor = [UIColor darkBlueColor].CGColor;
     
-    self.nextView.layer.borderColor = [UIColor darkRedColor].CGColor;
-    self.nextView.layer.borderWidth = 20.0f;
+    self.nextView.layer.backgroundColor = [UIColor darkRedColor].CGColor;
     
-    self.posistionView.layer.borderColor = [UIColor lightGreenColor].CGColor;
-    self.posistionView.layer.borderWidth = 20.0f;
+    self.posistionView.layer.backgroundColor = [UIColor lightGreenColor].CGColor;
     
-    self.songInfoView.layer.borderColor = [UIColor lightGreenColor].CGColor;
-    self.songInfoView.layer.borderWidth = 20.0f;
+    self.songInfoView.layer.backgroundColor = [UIColor lightGreenColor].CGColor;
     
-    self.songArtView.layer.borderColor = [UIColor lightBlueColor].CGColor;
-    self.songArtView.layer.borderWidth = 20.0f;
+    self.songArtView.layer.backgroundColor = [UIColor lightBlueColor].CGColor;
     
-    self.homeView.layer.borderColor = [UIColor lightYellowColor].CGColor;
-    self.homeView.layer.borderWidth = 20.0f;
+    self.homeView.layer.backgroundColor = [UIColor lightYellowColor].CGColor;
     
-    self.volumeUpView.layer.borderColor = [UIColor darkBlueColor].CGColor;
-    self.volumeUpView.layer.borderWidth = 20.0f;
+    self.volumeUpView.layer.backgroundColor = [UIColor darkBlueColor].CGColor;
     
-    self.volumeDownView.layer.borderColor = [UIColor darkRedColor].CGColor;
-    self.volumeDownView.layer.borderWidth = 20.0f;
+    self.volumeDownView.layer.backgroundColor = [UIColor darkRedColor].CGColor;
 }
 
 - (void)musicPlayer:(GVMusicPlayerController *)musicPlayer playbackStateChanged:(MPMusicPlaybackState)playbackState previousPlaybackState:(MPMusicPlaybackState)previousPlaybackState {
@@ -83,32 +110,77 @@
 }
 
 - (void)musicPlayer:(GVMusicPlayerController *)musicPlayer trackDidChange:(MPMediaItem *)nowPlayingItem previousTrack:(MPMediaItem *)previousTrack {
-    // Labels
-    //self.songLabel.text = [nowPlayingItem valueForProperty:MPMediaItemPropertyTitle];
-    //self.artistLabel.text = [nowPlayingItem valueForProperty:MPMediaItemPropertyArtist];
+    
+    // Time labels
+    NSTimeInterval trackLength = [[nowPlayingItem valueForProperty:MPMediaItemPropertyPlaybackDuration] doubleValue];
+    self.trackLengthLabel.text = [NSString stringFromTime:trackLength];
+    self.progressSlider.value = 0;
+    self.progressSlider.maximumValue = trackLength;
+    
+    // Song Labels
+    self.songLabel.text = [nowPlayingItem valueForProperty:MPMediaItemPropertyTitle];
+    self.artistLabel.text = [nowPlayingItem valueForProperty:MPMediaItemPropertyArtist];
     
     // Artwork
     MPMediaItemArtwork *artwork = [nowPlayingItem valueForProperty:MPMediaItemPropertyArtwork];
     if (artwork != nil) {
-        self.songImageView.image = [artwork imageWithSize:self.songImageView.frame.size];
+        self.songImageView.image = [artwork imageWithSize:self.songArtView.frame.size];
     }
+    
+    self.nowPlayingSong = nowPlayingItem;
+    
+    if ([GVMusicPlayerController sharedInstance].playbackState != MPMusicPlaybackStatePlaying) {
+        [self.playPauseButton setImage:[UIImage imageNamed:@"Controls_Play.png"] forState:UIControlStateNormal];
+    } else {
+        [self.playPauseButton setImage:[UIImage imageNamed:@"Controls_Pause.png"] forState:UIControlStateNormal];
+    }
+    
+    //[self saveAlbumArt:nowPlayingItem];
 }
 
-- (void)musicPlayer:(GVMusicPlayerController *)musicPlayer volumeChanged:(float)volume {
-    //self.volumeSlider.value = volume;
+
+
+-(void)saveAlbumArt:(MPMediaItem *)nowPlayingItem
+{
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSData *myEncodedObject = [NSKeyedArchiver archivedDataWithRootObject:nowPlayingItem.artwork];
+    [prefs setObject:myEncodedObject forKey:@"albumArtwork"];
+    [prefs synchronize];
+}
+
+-(void) setAlbumArt:(MPMediaItem *)nowPlayingItem{
+//    // Artwork
+//    MPMediaItemArtwork *artwork = [nowPlayingItem valueForProperty:MPMediaItemPropertyArtwork];
+//    if (artwork != nil) {
+//        self.songImageView.image = [artwork imageWithSize:self.songArtView.frame.size];
+//    }
+//    
+//    NSData* imageData = [[NSUserDefaults standardUserDefaults] objectForKey:@"albumArtwork"];
+//    UIImage* image = [UIImage imageWithData:imageData];
+//    if (image != NULL) {
+//        self.songImageView.image = image;
+//    }
 }
 
 - (IBAction)playpauseButton:(id)sender {
-
     if ([GVMusicPlayerController sharedInstance].playbackState == MPMusicPlaybackStatePlaying) {
         [[GVMusicPlayerController sharedInstance] pause];
         [sender setImage:[UIImage imageNamed:@"Controls_Play.png"] forState:UIControlStateNormal];
-        self.songIsPlaying = NO;
     } else {
         [[GVMusicPlayerController sharedInstance] play];
         [sender setImage:[UIImage imageNamed:@"Controls_Pause.png"] forState:UIControlStateNormal];
-        self.songIsPlaying = YES;
     }
+
+    if (self.nowPlayingSong == nil) {
+        [GVMusicPlayerController sharedInstance].shuffleMode = MPMusicShuffleModeSongs;
+        #if !(TARGET_IPHONE_SIMULATOR)
+        MPMediaQuery *query = [MPMediaQuery songsQuery];
+        [[GVMusicPlayerController sharedInstance] setQueueWithQuery:query];
+        [[GVMusicPlayerController sharedInstance] play];
+        #endif
+        [self.playPauseButton setImage:[UIImage imageNamed:@"Controls_Pause.png"] forState:UIControlStateNormal];
+    }
+    
     
 }
 
@@ -124,10 +196,33 @@
     
 }
 - (IBAction)volumeUpTapped:(id)sender {
-    
+    float vol = [[AVAudioSession sharedInstance] outputVolume];
+    [[GVMusicPlayerController sharedInstance] setVolume:vol+.05];
+
 }
 - (IBAction)volumeDownTapped:(id)sender {
-    
+    float vol = [[AVAudioSession sharedInstance] outputVolume];
+    [[GVMusicPlayerController sharedInstance] setVolume:vol-.05];
+}
+
+- (void)timedJob {
+    if (!self.panningProgress) {
+        self.progressSlider.value = [GVMusicPlayerController sharedInstance].currentPlaybackTime;
+        self.trackCurrentPlaybackTimeLabel.text = [NSString stringFromTime:[GVMusicPlayerController sharedInstance].currentPlaybackTime];
+    }
+}
+
+- (IBAction)progressChanged:(UISlider *)sender {
+    // While dragging the progress slider around, we change the time label,
+    // but we're not actually changing the playback time yet.
+    self.panningProgress = YES;
+    self.trackCurrentPlaybackTimeLabel.text = [NSString stringFromTime:sender.value];
+}
+
+- (IBAction)progressEnd {
+    // Only when dragging is done, we change the playback time.
+    [GVMusicPlayerController sharedInstance].currentPlaybackTime = self.progressSlider.value;
+    self.panningProgress = NO;
 }
 
 @end
