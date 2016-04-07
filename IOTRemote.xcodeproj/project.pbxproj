@@ -16,6 +16,7 @@
 		0987AEBC1CAC41DE00015565 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0987AEBB1CAC41DE00015565 /* AudioToolbox.framework */; };
 		0987AEBE1CAC41E400015565 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0987AEBD1CAC41E400015565 /* AVFoundation.framework */; };
 		0987AEC01CAC41EE00015565 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0987AEBF1CAC41EE00015565 /* MediaPlayer.framework */; };
+		09A6F1141CB5627000323C20 /* NSString+TimeToString.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A6F1131CB5627000323C20 /* NSString+TimeToString.m */; };
 		09B9F1711C7A8E9B00461512 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B9F1701C7A8E9B00461512 /* main.m */; };
 		09B9F1741C7A8E9B00461512 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B9F1731C7A8E9B00461512 /* AppDelegate.m */; };
 		09B9F1771C7A8E9B00461512 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B9F1761C7A8E9B00461512 /* ViewController.m */; };
@@ -40,6 +41,8 @@
 		0987AEBB1CAC41DE00015565 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0987AEBD1CAC41E400015565 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0987AEBF1CAC41EE00015565 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		09A6F1121CB5627000323C20 /* NSString+TimeToString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TimeToString.h"; sourceTree = "<group>"; };
+		09A6F1131CB5627000323C20 /* NSString+TimeToString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TimeToString.m"; sourceTree = "<group>"; };
 		09B9F16C1C7A8E9B00461512 /* IOTRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOTRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B9F1701C7A8E9B00461512 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		09B9F1721C7A8E9B00461512 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 		09B9F16E1C7A8E9B00461512 /* IOTRemote */ = {
 			isa = PBXGroup;
 			children = (
+				09A6F1121CB5627000323C20 /* NSString+TimeToString.h */,
+				09A6F1131CB5627000323C20 /* NSString+TimeToString.m */,
 				090ADC2F1CAC4C56003DC3FB /* YO.m */,
 				090ADC311CAC4C5B003DC3FB /* GVMusicPlayerController.m */,
 				090ADC2A1CAC438C003DC3FB /* GVMusicPlayerController */,
@@ -279,6 +284,7 @@
 				09B9F1741C7A8E9B00461512 /* AppDelegate.m in Sources */,
 				09B9F18B1C7A9CBD00461512 /* UIColor+IOTRemote_Colors.m in Sources */,
 				09B9F1711C7A8E9B00461512 /* main.m in Sources */,
+				09A6F1141CB5627000323C20 /* NSString+TimeToString.m in Sources */,
 				090ADC2E1CAC43C9003DC3FB /* MusicViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
