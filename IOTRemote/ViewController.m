@@ -12,7 +12,6 @@
 #import <PubNub/PubNub.h>
 #import "AFHTTPRequestOperationManager.h"
 
-
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UIView *lightView;
 @property (strong, nonatomic) IBOutlet UIView *fanView;
@@ -121,14 +120,14 @@
     
     if (self.lightIsOn) {
         [self.lightButton setImage:[UIImage imageNamed:@"light_off.png"] forState:UIControlStateNormal];
-        self.turnLight;
+        //self.turnLight;
         self.lightIsOn = NO;
         self.lightView.backgroundColor = [UIColor offGrayColor];
     }
     else{
         [self.lightButton setImage:[UIImage imageNamed:@"light_on.png"] forState:UIControlStateNormal];
         self.lightIsOn = YES;
-        self.turnLight;
+        //self.turnLight;
         self.lightView.backgroundColor = [UIColor lightYellowColor];
     }
 }
