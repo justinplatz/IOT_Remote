@@ -1,0 +1,894 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AFHTTPRequestOperation.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFHTTPRequestOperationManager.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFHTTPSessionManager.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFNetworkActivityIndicatorManager.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFNetworkReachabilityManager.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFNetworking-Swift.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFNetworking-umbrella.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/Target Support Files/AFNetworking/AFNetworking-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFNetworking.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/AFNetworking/AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFSecurityPolicy.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFURLConnectionOperation.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFURLRequestSerialization.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFURLResponseSerialization.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFURLSessionManager.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIActivityIndicatorView+AFNetworking.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIAlertView+AFNetworking.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIButton+AFNetworking.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIImageView+AFNetworking.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIKit+AFNetworking.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/UIKit+AFNetworking/UIKit+AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIProgressView+AFNetworking.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIRefreshControl+AFNetworking.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIWebView+AFNetworking.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Intermediates/Pods.build/Debug-iphonesimulator/AFNetworking.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/CocoaLumberjack.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "CocoaLumberjack-Swift.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/CocoaLumberjack.framework/Headers/CocoaLumberjack-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "CocoaLumberjack.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/CocoaLumberjack/Classes/CocoaLumberjack.h"
+        },
+        {
+          'type': 'file',
+          'name': "DDASLLogCapture.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/CocoaLumberjack/Classes/DDASLLogCapture.h"
+        },
+        {
+          'type': 'file',
+          'name': "DDASLLogger.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/CocoaLumberjack/Classes/DDASLLogger.h"
+        },
+        {
+          'type': 'file',
+          'name': "DDAbstractDatabaseLogger.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/CocoaLumberjack/Classes/DDAbstractDatabaseLogger.h"
+        },
+        {
+          'type': 'file',
+          'name': "DDAssertMacros.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/CocoaLumberjack/Classes/DDAssertMacros.h"
+        },
+        {
+          'type': 'file',
+          'name': "DDContextFilterLogFormatter.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/CocoaLumberjack/Classes/Extensions/DDContextFilterLogFormatter.h"
+        },
+        {
+          'type': 'file',
+          'name': "DDDispatchQueueLogFormatter.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/CocoaLumberjack/Classes/Extensions/DDDispatchQueueLogFormatter.h"
+        },
+        {
+          'type': 'file',
+          'name': "DDFileLogger.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/CocoaLumberjack/Classes/DDFileLogger.h"
+        },
+        {
+          'type': 'file',
+          'name': "DDLegacyMacros.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/CocoaLumberjack/Classes/DDLegacyMacros.h"
+        },
+        {
+          'type': 'file',
+          'name': "DDLog+LOGV.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/CocoaLumberjack/Classes/DDLog+LOGV.h"
+        },
+        {
+          'type': 'file',
+          'name': "DDLog.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/CocoaLumberjack/Classes/DDLog.h"
+        },
+        {
+          'type': 'file',
+          'name': "DDLogMacros.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/CocoaLumberjack/Classes/DDLogMacros.h"
+        },
+        {
+          'type': 'file',
+          'name': "DDMultiFormatter.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/CocoaLumberjack/Classes/Extensions/DDMultiFormatter.h"
+        },
+        {
+          'type': 'file',
+          'name': "DDTTYLogger.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/CocoaLumberjack/Classes/DDTTYLogger.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/CocoaLumberjack.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Intermediates/Pods.build/Debug-iphonesimulator/CocoaLumberjack.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/OCMock.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "NSInvocation+OCMAdditions.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/NSInvocation+OCMAdditions.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSMethodSignature+OCMAdditions.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/NSMethodSignature+OCMAdditions.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSNotificationCenter+OCMAdditions.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/NSNotificationCenter+OCMAdditions.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSObject+OCMAdditions.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/NSObject+OCMAdditions.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCClassMockObject.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCClassMockObject.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMArg.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCMArg.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMBlockCaller.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCMBlockCaller.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMBoxedReturnValueProvider.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCMBoxedReturnValueProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMConstraint.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCMConstraint.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMExceptionReturnValueProvider.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCMExceptionReturnValueProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMIndirectReturnValueProvider.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCMIndirectReturnValueProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMNotificationPoster.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCMNotificationPoster.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMObserverRecorder.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCMObserverRecorder.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMPassByRefSetter.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCMPassByRefSetter.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMRealObjectForwarder.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCMRealObjectForwarder.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMReturnValueProvider.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCMReturnValueProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMock-Swift.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/OCMock.framework/Headers/OCMock-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMock-umbrella.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/Target Support Files/OCMock/OCMock-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMock.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCMock.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMockObject.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCMockObject.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMockRecorder.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCMockRecorder.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCObserverMockObject.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCObserverMockObject.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCPartialMockObject.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCPartialMockObject.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCPartialMockRecorder.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCPartialMockRecorder.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCProtocolMockObject.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/OCMock/Source/OCMock/OCProtocolMockObject.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/OCMock.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Intermediates/Pods.build/Debug-iphonesimulator/OCMock.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/Pods.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-Swift.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/Pods.framework/Headers/Pods-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods-umbrella.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/Target Support Files/Pods/Pods-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/Pods.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/PubNub.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "PNAES.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/PNAES.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNAPNSEnabledChannelsResult.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNAPNSEnabledChannelsResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNAcknowledgmentStatus.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNAcknowledgmentStatus.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNChannelClientStateResult.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNChannelClientStateResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNChannelGroupChannelsResult.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNChannelGroupChannelsResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNChannelGroupClientStateResult.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNChannelGroupClientStateResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNChannelGroupsResult.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNChannelGroupsResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNClientInformation.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/PNClientInformation.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNClientStateUpdateStatus.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNClientStateUpdateStatus.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNConfiguration.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/PNConfiguration.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNErrorCodes.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/PNErrorCodes.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNErrorStatus.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNErrorStatus.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNHistoryResult.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNHistoryResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNLog.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Logger/PNLog.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNObjectEventListener.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Protocols/PNObjectEventListener.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNPresenceChannelGroupHereNowResult.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNPresenceChannelGroupHereNowResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNPresenceChannelHereNowResult.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNPresenceChannelHereNowResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNPresenceGlobalHereNowResult.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNPresenceGlobalHereNowResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNPresenceWhereNowResult.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNPresenceWhereNowResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNPublishStatus.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNPublishStatus.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNResult.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNServiceData.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNServiceData.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNStatus.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNStatus.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNStructures.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/PNStructures.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNSubscribeStatus.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNSubscribeStatus.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNSubscriberResults.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNSubscriberResults.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNTimeResult.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNTimeResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "PubNub+APNS.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Core/PubNub+APNS.h"
+        },
+        {
+          'type': 'file',
+          'name': "PubNub+ChannelGroup.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Core/PubNub+ChannelGroup.h"
+        },
+        {
+          'type': 'file',
+          'name': "PubNub+Core.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Core/PubNub+Core.h"
+        },
+        {
+          'type': 'file',
+          'name': "PubNub+History.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Core/PubNub+History.h"
+        },
+        {
+          'type': 'file',
+          'name': "PubNub+Presence.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Core/PubNub+Presence.h"
+        },
+        {
+          'type': 'file',
+          'name': "PubNub+Publish.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Core/PubNub+Publish.h"
+        },
+        {
+          'type': 'file',
+          'name': "PubNub+State.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Core/PubNub+State.h"
+        },
+        {
+          'type': 'file',
+          'name': "PubNub+Subscribe.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Core/PubNub+Subscribe.h"
+        },
+        {
+          'type': 'file',
+          'name': "PubNub+Time.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Core/PubNub+Time.h"
+        },
+        {
+          'type': 'file',
+          'name': "PubNub-Swift.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/PubNub.framework/Headers/PubNub-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "PubNub-umbrella.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/Target Support Files/PubNub/PubNub-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "PubNub.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/PubNub.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/PubNub.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Intermediates/Pods.build/Debug-iphonesimulator/PubNub.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/PubNub.framework/PrivateHeaders",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "PNArray.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Helpers/PNArray.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNChannel.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Helpers/PNChannel.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNChannelGroupAuditionParser.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/Parsers/PNChannelGroupAuditionParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNChannelGroupModificationParser.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/Parsers/PNChannelGroupModificationParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNClass.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Helpers/PNClass.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNClientState.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Managers/PNClientState.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNClientStateParser.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/Parsers/PNClientStateParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNConfiguration+Private.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/PNConfiguration+Private.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNConstants.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/PNConstants.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNData.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Helpers/PNData.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNDictionary.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Helpers/PNDictionary.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNEnvelopeInformation.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/PNEnvelopeInformation.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNErrorParser.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/Parsers/PNErrorParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNErrorStatus+Private.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNErrorStatus+Private.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNGZIP.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Helpers/PNGZIP.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNHeartbeat.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Managers/PNHeartbeat.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNHeartbeatParser.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/Parsers/PNHeartbeatParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNHelpers.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Helpers/PNHelpers.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNHistoryParser.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/Parsers/PNHistoryParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNJSON.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Helpers/PNJSON.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNKeychain.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/PNKeychain.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNLeaveParser.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/Parsers/PNLeaveParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNLogFileManager.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Logger/PNLogFileManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNLogMacro.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Logger/PNLogMacro.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNLogger.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Logger/PNLogger.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNMessagePublishParser.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/Parsers/PNMessagePublishParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNNetwork.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/PNNetwork.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNNetworkResponseSerializer.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/PNNetworkResponseSerializer.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNNumber.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Helpers/PNNumber.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNParser.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Protocols/PNParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNPresenceHereNowParser.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/Parsers/PNPresenceHereNowParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNPresenceWhereNowParser.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/Parsers/PNPresenceWhereNowParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNPrivateStructures.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/PNPrivateStructures.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNPushNotificationsAuditParser.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/Parsers/PNPushNotificationsAuditParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNPushNotificationsStateModificationParser.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/Parsers/PNPushNotificationsStateModificationParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNReachability.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/PNReachability.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNRequestParameters.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/PNRequestParameters.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNResult+Private.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNResult+Private.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNServiceData+Private.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNServiceData+Private.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNStateListener.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Managers/PNStateListener.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNStatus+Private.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNStatus+Private.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNString.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Helpers/PNString.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNSubscribeParser.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/Parsers/PNSubscribeParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNSubscribeStatus+Private.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Service Objects/PNSubscribeStatus+Private.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNSubscriber.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Data/Managers/PNSubscriber.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNTimeParser.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/Parsers/PNTimeParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNURLBuilder.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Network/PNURLBuilder.h"
+        },
+        {
+          'type': 'file',
+          'name': "PNURLRequest.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Misc/Helpers/PNURLRequest.h"
+        },
+        {
+          'type': 'file',
+          'name': "PubNub+CorePrivate.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Core/PubNub+CorePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "PubNub+PresencePrivate.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Core/PubNub+PresencePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "PubNub+SubscribePrivate.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/PubNub/PubNub/Core/PubNub+SubscribePrivate.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/youtube_ios_player_helper.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "YTPlayerView.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/youtube-ios-player-helper/Classes/YTPlayerView.h"
+        },
+        {
+          'type': 'file',
+          'name': "youtube-ios-player-helper-umbrella.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/Pods/Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "youtube_ios_player_helper-Swift.h",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/youtube_ios_player_helper.framework/Headers/youtube_ios_player_helper-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Products/Debug-iphonesimulator/youtube_ios_player_helper.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/jin/Desktop/eecs481/jin_408/DerivedData/Build/Intermediates/Pods.build/Debug-iphonesimulator/youtube-ios-player-helper.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

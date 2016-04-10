@@ -46,6 +46,31 @@
     return [UIColor colorWithRed:0.741 green:0.765 blue:0.78 alpha:1]; /*#bdc3c7*/
 }
 
++ (UIColor *)emerald
+{
+    return [UIColor colorWithRed:0.247 green:0.765 blue:0.502 alpha:1];
+}
+
++ (UIColor *)whiteSmoke
+{
+    return [UIColor colorWithRed:0.925 green:0.925 blue:0.925 alpha:1];
+}
+
++ (UIColor *)babyBlue
+{
+    return [UIColor colorWithRed:0.349 green:0.671 blue:0.89 alpha:1];
+}
+
++ (UIColor *)sunsetOrange
+{
+    return [UIColor colorWithRed:0.965 green:0.278 blue:0.278 alpha:1];
+}
+
++ (UIColor *)white
+{
+    return [UIColor colorWithRed:0.965 green:0.278 blue:0.278 alpha:1];
+}
+
 
 
 

@@ -28,19 +28,25 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.2.0):
     - CocoaLumberjack/Default
+  - OCMock (2.2.3)
   - PubNub (4.3.0):
     - CocoaLumberjack (= 2.2.0)
     - PubNub/Core (= 4.3.0)
   - PubNub/Core (4.3.0):
     - CocoaLumberjack (= 2.2.0)
+  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.4)
+  - OCMock (= 2.2.3)
   - PubNub
+  - youtube-ios-player-helper (~> 0.1.4)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  OCMock: d2a4f33dcdd80da8af651eda9a598646c9bcc0b5
   PubNub: a05f2a2c6cc1f637a0c473f236c4671c0b8c09b1
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
 COCOAPODS: 0.39.0

@@ -25,6 +25,7 @@
 		09B9F18B1C7A9CBD00461512 /* UIColor+IOTRemote_Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B9F18A1C7A9CBD00461512 /* UIColor+IOTRemote_Colors.m */; };
 		09F8CF141C7B6378008A199A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F8CF131C7B6377008A199A /* Assets.xcassets */; };
 		09F8CF161C7B640D008A199A /* click_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09F8CF151C7B640D008A199A /* click_sound.mp3 */; };
+		3C319D301CB8CFD000CA8C23 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C319D2F1CB8CFD000CA8C23 /* VideoViewController.m */; };
 		B271AB505B2A59FCB299D792 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A950E0AA6E74298BB5BD09 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,8 @@
 		09F8CF131C7B6377008A199A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09F8CF151C7B640D008A199A /* click_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click_sound.mp3; sourceTree = "<group>"; };
 		28A950E0AA6E74298BB5BD09 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C319D2F1CB8CFD000CA8C23 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		3C319D311CB8CFF400CA8C23 /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VideoViewController.h; path = ../VideoViewController.h; sourceTree = "<group>"; };
 		523CE7818C565DAA9647345D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		935ADF64484C656E5609A287 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +118,8 @@
 				09F8CF131C7B6377008A199A /* Assets.xcassets */,
 				09B9F16F1C7A8E9B00461512 /* Supporting Files */,
 				090ADC2C1CAC43C9003DC3FB /* MusicViewController.h */,
+				3C319D311CB8CFF400CA8C23 /* VideoViewController.h */,
+				3C319D2F1CB8CFD000CA8C23 /* VideoViewController.m */,
 				090ADC2D1CAC43C9003DC3FB /* MusicViewController.m */,
 			);
 			path = IOTRemote;
@@ -280,6 +285,7 @@
 			files = (
 				09B9F1771C7A8E9B00461512 /* ViewController.m in Sources */,
 				090ADC301CAC4C56003DC3FB /* YO.m in Sources */,
+				3C319D301CB8CFD000CA8C23 /* VideoViewController.m in Sources */,
 				090ADC321CAC4C5B003DC3FB /* GVMusicPlayerController.m in Sources */,
 				09B9F1741C7A8E9B00461512 /* AppDelegate.m in Sources */,
 				09B9F18B1C7A9CBD00461512 /* UIColor+IOTRemote_Colors.m in Sources */,

@@ -86,10 +86,14 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/AFNetworking.framework"
   install_framework "Pods/CocoaLumberjack.framework"
+  install_framework "Pods/OCMock.framework"
   install_framework "Pods/PubNub.framework"
+  install_framework "Pods/youtube_ios_player_helper.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/AFNetworking.framework"
   install_framework "Pods/CocoaLumberjack.framework"
+  install_framework "Pods/OCMock.framework"
   install_framework "Pods/PubNub.framework"
+  install_framework "Pods/youtube_ios_player_helper.framework"
 fi

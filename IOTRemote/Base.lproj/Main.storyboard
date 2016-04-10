@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -20,10 +20,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ps-8W-oqt">
-                                <rect key="frame" x="0.0" y="20" width="341.5" height="374"/>
+                                <rect key="frame" x="0.0" y="20" width="341" height="374"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRb-vq-Ehl">
-                                        <rect key="frame" x="44" y="56" width="254.5" height="262"/>
+                                        <rect key="frame" x="44" y="56" width="254" height="262"/>
                                         <state key="normal" image="light_off"/>
                                         <connections>
                                             <action selector="lightButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WYX-mO-EYi"/>
@@ -45,17 +45,17 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7cM-da-rQA">
-                                <rect key="frame" x="199" y="20" width="341" height="374"/>
+                                <rect key="frame" x="199" y="20" width="342" height="374"/>
                                 <color key="backgroundColor" red="0.69019607843137254" green="0.71372549019607845" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="widthClass=regular" misplaced="YES">
                                     <rect key="frame" x="340" y="20" width="342" height="374"/>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5uB-su-2Kz">
-                                <rect key="frame" x="399" y="20" width="341.5" height="374"/>
+                                <rect key="frame" x="399" y="20" width="342" height="374"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7r-yG-ipY">
-                                        <rect key="frame" x="48" y="83" width="246.5" height="208"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7r-yG-ipY">
+                                        <rect key="frame" x="47" y="83" width="247" height="208"/>
                                         <state key="normal" image="music"/>
                                         <connections>
                                             <action selector="musicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Mg-Zj-QZM"/>
@@ -72,10 +72,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AN5-T2-PsU">
-                                <rect key="frame" x="399" y="394" width="341.5" height="374"/>
+                                <rect key="frame" x="399" y="394" width="342" height="374"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6j-GC-bw7">
-                                        <rect key="frame" x="33" y="67" width="276.5" height="239"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6j-GC-bw7">
+                                        <rect key="frame" x="32" y="67" width="277" height="239"/>
                                         <state key="normal" image="disco_off"/>
                                         <connections>
                                             <action selector="discoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r0P-e7-ukc"/>
@@ -91,10 +91,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0b-p7-JaW">
-                                <rect key="frame" x="0.0" y="394" width="341.5" height="374"/>
+                                <rect key="frame" x="0.0" y="394" width="341" height="374"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7F-Qx-Hcu">
-                                        <rect key="frame" x="40" y="72" width="261.5" height="229"/>
+                                        <rect key="frame" x="40" y="72" width="261" height="229"/>
                                         <state key="normal" image="alert_off"/>
                                         <connections>
                                             <action selector="alertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VIu-OG-lPx"/>
@@ -116,16 +116,17 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AHI-br-xUg">
-                                <rect key="frame" x="199" y="394" width="341" height="374"/>
+                                <rect key="frame" x="199" y="394" width="342" height="374"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ys-68-dgb">
-                                        <rect key="frame" x="43" y="99" width="255" height="174"/>
+                                        <rect key="frame" x="43" y="99" width="256" height="174"/>
                                         <state key="normal" image="tv"/>
                                         <variation key="widthClass=regular" misplaced="YES">
                                             <rect key="frame" x="42" y="100" width="255" height="174"/>
                                         </variation>
                                         <connections>
                                             <action selector="tvButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ye9-Nf-1JL"/>
+                                            <segue destination="q3i-hx-YWh" kind="show" id="KOF-cE-zBC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -141,7 +142,7 @@
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8d0-ab-PV5">
-                                <rect key="frame" x="223" y="69" width="294" height="276"/>
+                                <rect key="frame" x="223" y="69" width="295" height="276"/>
                                 <state key="normal" image="fan_off"/>
                                 <variation key="widthClass=regular" misplaced="YES">
                                     <rect key="frame" x="364" y="69" width="295" height="276"/>
@@ -205,7 +206,106 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="326" y="429"/>
+            <point key="canvasLocation" x="459" y="-639"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="eqc-0O-qbH">
+            <objects>
+                <viewController id="q3i-hx-YWh" customClass="VideoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Ba-UB-ml7"/>
+                        <viewControllerLayoutGuide type="bottom" id="8sr-AB-h4P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qAC-au-Hic" customClass="VideoV">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kIV-l7-22Y" customClass="YTPlayerView">
+                                <rect key="frame" x="12" y="20" width="1000" height="563"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LAz-XY-kfp">
+                                <rect key="frame" x="0.0" y="586" width="200" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDl-qo-Efq">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
+                                        <state key="normal" image="Controls_Back"/>
+                                        <connections>
+                                            <action selector="previousButton:" destination="q3i-hx-YWh" eventType="touchUpInside" id="oql-yZ-slW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ud-E2-4Lq">
+                                <rect key="frame" x="416" y="586" width="200" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7j-GG-Gzc">
+                                        <rect key="frame" x="0.0" y="-2" width="200" height="182"/>
+                                        <state key="normal" image="Controls_Skip"/>
+                                        <connections>
+                                            <action selector="nextButton:" destination="q3i-hx-YWh" eventType="touchUpInside" id="AQt-7H-m6c"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2s-DF-3xC">
+                                <rect key="frame" x="208" y="585" width="200" height="181"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKk-o3-CzL">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="182"/>
+                                        <state key="normal" image="Controls_Play"/>
+                                        <connections>
+                                            <action selector="playButton:" destination="q3i-hx-YWh" eventType="touchUpInside" id="jAI-XS-UVf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ee0-f4-X2C">
+                                <rect key="frame" x="624" y="585" width="200" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnE-g0-uNH">
+                                        <rect key="frame" x="0.0" y="-1" width="200" height="182"/>
+                                        <state key="normal" image="home"/>
+                                        <connections>
+                                            <action selector="Home:" destination="q3i-hx-YWh" eventType="touchUpInside" id="Bui-KR-me4"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="i3o-ya-7YO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dfg-Kp-Tbh">
+                                <rect key="frame" x="818" y="586" width="200" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVU-zl-E2R">
+                                        <rect key="frame" x="0.0" y="-2" width="200" height="180"/>
+                                        <state key="normal" image="cast"/>
+                                        <connections>
+                                            <action selector="cast:" destination="q3i-hx-YWh" eventType="touchUpInside" id="5mG-49-I1v"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="homeView" destination="Ee0-f4-X2C" id="G2y-CY-EWN"/>
+                        <outlet property="nextView" destination="5Ud-E2-4Lq" id="44C-Ks-XTn"/>
+                        <outlet property="playView" destination="B2s-DF-3xC" id="cRk-vT-KEW"/>
+                        <outlet property="playerView" destination="kIV-l7-22Y" id="Jbp-eO-wai"/>
+                        <outlet property="previousView" destination="LAz-XY-kfp" id="1V9-xw-mAj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cN8-DJ-bKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="28"/>
         </scene>
         <!--Music View Controller-->
         <scene sceneID="uJe-Oc-c5z">
@@ -723,13 +823,13 @@
                                         <exclude reference="F4N-Q5-EU7"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="6fB-BC-Sd2"/>
-                                        <exclude reference="Nrm-3E-Jri"/>
-                                        <exclude reference="dWn-dr-FY0"/>
                                         <exclude reference="BsB-cR-yhd"/>
                                         <exclude reference="G9F-vx-e5m"/>
                                         <exclude reference="X4a-Z4-KVB"/>
                                         <exclude reference="rVb-0c-iil"/>
+                                        <exclude reference="6fB-BC-Sd2"/>
+                                        <exclude reference="Nrm-3E-Jri"/>
+                                        <exclude reference="dWn-dr-FY0"/>
                                         <exclude reference="gdN-Q8-NJU"/>
                                         <exclude reference="rLA-3r-ZXU"/>
                                         <exclude reference="uy7-M3-nyd"/>
@@ -742,13 +842,13 @@
                                         <include reference="F4N-Q5-EU7"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="6fB-BC-Sd2"/>
-                                        <include reference="Nrm-3E-Jri"/>
-                                        <include reference="dWn-dr-FY0"/>
                                         <include reference="BsB-cR-yhd"/>
                                         <include reference="G9F-vx-e5m"/>
                                         <include reference="X4a-Z4-KVB"/>
                                         <include reference="rVb-0c-iil"/>
+                                        <include reference="6fB-BC-Sd2"/>
+                                        <include reference="Nrm-3E-Jri"/>
+                                        <include reference="dWn-dr-FY0"/>
                                         <include reference="gdN-Q8-NJU"/>
                                         <include reference="rLA-3r-ZXU"/>
                                         <include reference="uy7-M3-nyd"/>
@@ -823,50 +923,50 @@
                                 <exclude reference="bLZ-TJ-aY3"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="POv-Df-lZn"/>
-                                <exclude reference="bDg-wU-tAN"/>
-                                <exclude reference="fzR-IW-igX"/>
-                                <exclude reference="4Hg-0g-vci"/>
-                                <exclude reference="Oi4-aR-5PZ"/>
-                                <exclude reference="azA-ka-l7a"/>
-                                <exclude reference="4xA-P0-5EG"/>
-                                <exclude reference="77a-xs-bUS"/>
-                                <exclude reference="MCo-jh-tAT"/>
-                                <exclude reference="WKa-FF-xlr"/>
                                 <exclude reference="GsW-Ka-OGQ"/>
                                 <exclude reference="W4q-z7-iw8"/>
                                 <exclude reference="YYZ-SR-XPP"/>
                                 <exclude reference="dmm-hm-Sy0"/>
                                 <exclude reference="gIP-pb-Jvq"/>
                                 <exclude reference="s6T-RM-gCh"/>
-                                <exclude reference="8tM-Cu-prb"/>
-                                <exclude reference="L2p-ym-k5j"/>
-                                <exclude reference="aY3-OT-GeQ"/>
-                                <exclude reference="kxV-Jr-sKY"/>
                                 <exclude reference="CAh-x7-CgB"/>
                                 <exclude reference="Pzv-jn-P6v"/>
-                                <exclude reference="5na-oL-tyB"/>
-                                <exclude reference="UbX-RO-goJ"/>
-                                <exclude reference="6bu-RK-N1X"/>
-                                <exclude reference="cbi-Ju-scm"/>
-                                <exclude reference="fcK-7K-SG9"/>
+                                <exclude reference="4Hg-0g-vci"/>
+                                <exclude reference="Oi4-aR-5PZ"/>
+                                <exclude reference="azA-ka-l7a"/>
                                 <exclude reference="1vd-vG-Hcu"/>
                                 <exclude reference="8hh-95-pc3"/>
                                 <exclude reference="Ai3-6B-0Rc"/>
                                 <exclude reference="lwb-54-ewl"/>
                                 <exclude reference="yW3-fr-St4"/>
+                                <exclude reference="4xA-P0-5EG"/>
+                                <exclude reference="77a-xs-bUS"/>
+                                <exclude reference="MCo-jh-tAT"/>
+                                <exclude reference="WKa-FF-xlr"/>
+                                <exclude reference="8tM-Cu-prb"/>
+                                <exclude reference="L2p-ym-k5j"/>
+                                <exclude reference="aY3-OT-GeQ"/>
+                                <exclude reference="kxV-Jr-sKY"/>
                                 <exclude reference="4ai-pg-hwJ"/>
                                 <exclude reference="8bs-pg-s4N"/>
                                 <exclude reference="EN7-Wv-PZX"/>
                                 <exclude reference="H8a-Pg-VRT"/>
                                 <exclude reference="MQ2-wY-h5Y"/>
                                 <exclude reference="QpX-6c-gqF"/>
+                                <exclude reference="POv-Df-lZn"/>
+                                <exclude reference="bDg-wU-tAN"/>
+                                <exclude reference="fzR-IW-igX"/>
+                                <exclude reference="5na-oL-tyB"/>
+                                <exclude reference="UbX-RO-goJ"/>
                                 <exclude reference="cab-LE-xtv"/>
                                 <exclude reference="fN5-6V-snB"/>
                                 <exclude reference="k7R-3N-cEw"/>
                                 <exclude reference="kt1-Vf-CKE"/>
                                 <exclude reference="nce-CE-c1i"/>
                                 <exclude reference="vfP-yT-V2f"/>
+                                <exclude reference="6bu-RK-N1X"/>
+                                <exclude reference="cbi-Ju-scm"/>
+                                <exclude reference="fcK-7K-SG9"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -881,50 +981,50 @@
                                 <include reference="bLZ-TJ-aY3"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="POv-Df-lZn"/>
-                                <include reference="bDg-wU-tAN"/>
-                                <include reference="fzR-IW-igX"/>
-                                <include reference="4Hg-0g-vci"/>
-                                <include reference="Oi4-aR-5PZ"/>
-                                <include reference="azA-ka-l7a"/>
-                                <include reference="4xA-P0-5EG"/>
-                                <include reference="77a-xs-bUS"/>
-                                <include reference="MCo-jh-tAT"/>
-                                <include reference="WKa-FF-xlr"/>
                                 <include reference="GsW-Ka-OGQ"/>
                                 <include reference="W4q-z7-iw8"/>
                                 <include reference="YYZ-SR-XPP"/>
                                 <include reference="dmm-hm-Sy0"/>
                                 <include reference="gIP-pb-Jvq"/>
                                 <include reference="s6T-RM-gCh"/>
-                                <include reference="8tM-Cu-prb"/>
-                                <include reference="L2p-ym-k5j"/>
-                                <include reference="aY3-OT-GeQ"/>
-                                <include reference="kxV-Jr-sKY"/>
                                 <include reference="CAh-x7-CgB"/>
                                 <include reference="Pzv-jn-P6v"/>
-                                <include reference="5na-oL-tyB"/>
-                                <include reference="UbX-RO-goJ"/>
-                                <include reference="6bu-RK-N1X"/>
-                                <exclude reference="cbi-Ju-scm"/>
-                                <exclude reference="fcK-7K-SG9"/>
+                                <include reference="4Hg-0g-vci"/>
+                                <include reference="Oi4-aR-5PZ"/>
+                                <include reference="azA-ka-l7a"/>
                                 <include reference="1vd-vG-Hcu"/>
                                 <exclude reference="8hh-95-pc3"/>
                                 <exclude reference="Ai3-6B-0Rc"/>
                                 <exclude reference="lwb-54-ewl"/>
                                 <include reference="yW3-fr-St4"/>
+                                <include reference="4xA-P0-5EG"/>
+                                <include reference="77a-xs-bUS"/>
+                                <include reference="MCo-jh-tAT"/>
+                                <include reference="WKa-FF-xlr"/>
+                                <include reference="8tM-Cu-prb"/>
+                                <include reference="L2p-ym-k5j"/>
+                                <include reference="aY3-OT-GeQ"/>
+                                <include reference="kxV-Jr-sKY"/>
                                 <include reference="4ai-pg-hwJ"/>
                                 <include reference="8bs-pg-s4N"/>
                                 <exclude reference="EN7-Wv-PZX"/>
                                 <include reference="H8a-Pg-VRT"/>
                                 <include reference="MQ2-wY-h5Y"/>
                                 <include reference="QpX-6c-gqF"/>
+                                <include reference="POv-Df-lZn"/>
+                                <include reference="bDg-wU-tAN"/>
+                                <include reference="fzR-IW-igX"/>
+                                <include reference="5na-oL-tyB"/>
+                                <include reference="UbX-RO-goJ"/>
                                 <exclude reference="cab-LE-xtv"/>
                                 <include reference="fN5-6V-snB"/>
                                 <include reference="k7R-3N-cEw"/>
                                 <exclude reference="kt1-Vf-CKE"/>
                                 <include reference="nce-CE-c1i"/>
                                 <include reference="vfP-yT-V2f"/>
+                                <include reference="6bu-RK-N1X"/>
+                                <exclude reference="cbi-Ju-scm"/>
+                                <exclude reference="fcK-7K-SG9"/>
                             </mask>
                         </variation>
                     </view>
@@ -951,7 +1051,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ze1-3D-oua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1255.5" y="-369"/>
+            <point key="canvasLocation" x="2013" y="-677"/>
         </scene>
     </scenes>
     <resources>
@@ -959,6 +1059,7 @@
         <image name="Controls_Play" width="240" height="240"/>
         <image name="Controls_Skip" width="240" height="240"/>
         <image name="alert_off" width="435" height="435"/>
+        <image name="cast" width="24" height="24"/>
         <image name="disco_off" width="435" height="435"/>
         <image name="fan_off" width="435" height="435"/>
         <image name="home" width="240" height="240"/>
@@ -968,4 +1069,7 @@
         <image name="volumeDown" width="240" height="240"/>
         <image name="volumeUp" width="240" height="240"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="i3o-ya-7YO"/>
+    </inferredMetricsTieBreakers>
 </document>

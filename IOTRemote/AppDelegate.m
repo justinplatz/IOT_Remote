@@ -25,6 +25,11 @@
     [self.client addListener:self];
     [self.client subscribeToChannels: @[@"light_channel"] withPresence:NO];
     
+    NSError *setCategoryError = nil;
+    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: &setCategoryError];
+    
+
+    
     return YES;
 }
 
@@ -43,6 +48,14 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+}
+
+-(void)remoteControlReceivedWithEvent:(UIEvent *)event { switch (event.subtype) { case UIEventSubtypeRemoteControlPlay:
+        // handle it break;
+    case UIEventSubtypeRemoteControlPause: // handle it break;
+    case UIEventSubtypeRemoteControlNextTrack: // handle it break;
+    case UIEventSubtypeRemoteControlPreviousTrack: // handle it break;
+    default: break; }
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {

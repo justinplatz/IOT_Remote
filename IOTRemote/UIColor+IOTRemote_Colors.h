@@ -17,4 +17,10 @@
 + (UIColor *)lightGreenColor;
 + (UIColor *)lightBlueColor;
 + (UIColor *)lightOrangeColor;
++ (UIColor *)emerald;
++ (UIColor *)whiteSmoke;
++ (UIColor *)babyBlue;
++ (UIColor *)sunsetOrange;
++ (UIColor *)white;
+
 @end
