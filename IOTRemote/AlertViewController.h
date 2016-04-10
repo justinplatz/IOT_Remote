@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 
-@interface UIViewController (AlertViewController)
+@interface AlertViewController : UIViewController
+
+
 
 @end
