@@ -47,7 +47,6 @@
     [super viewDidLoad];
     [self addBordersToViews];
     
-    self.nowPlayingSong = [[GVMusicPlayerController sharedInstance] nowPlayingItem];
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timedJob) userInfo:nil repeats:YES];
     [self.timer fire];
@@ -57,7 +56,8 @@
     [super viewWillAppear:animated];
     [[GVMusicPlayerController sharedInstance] addDelegate:self];
     [GVMusicPlayerController sharedInstance].repeatMode = MPMusicRepeatModeAll;
-    [self setAlbumArt:[[GVMusicPlayerController sharedInstance] nowPlayingItem]];
+    
+    self.nowPlayingSong = [[GVMusicPlayerController sharedInstance] nowPlayingItem];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -127,7 +127,6 @@
         self.songImageView.image = [artwork imageWithSize:self.songArtView.frame.size];
     }
     
-    self.nowPlayingSong = nowPlayingItem;
     
     if ([GVMusicPlayerController sharedInstance].playbackState != MPMusicPlaybackStatePlaying) {
         [self.playPauseButton setImage:[UIImage imageNamed:@"Controls_Play.png"] forState:UIControlStateNormal];
@@ -135,6 +134,7 @@
         [self.playPauseButton setImage:[UIImage imageNamed:@"Controls_Pause.png"] forState:UIControlStateNormal];
     }
     
+    self.nowPlayingSong = nowPlayingItem;
     //[self saveAlbumArt:nowPlayingItem];
 }
 
