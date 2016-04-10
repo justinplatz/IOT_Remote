@@ -120,14 +120,12 @@
     
     if (self.lightIsOn) {
         [self.lightButton setImage:[UIImage imageNamed:@"light_off.png"] forState:UIControlStateNormal];
-        //self.turnLight;
         self.lightIsOn = NO;
         self.lightView.backgroundColor = [UIColor offGrayColor];
     }
     else{
         [self.lightButton setImage:[UIImage imageNamed:@"light_on.png"] forState:UIControlStateNormal];
         self.lightIsOn = YES;
-        //self.turnLight;
         self.lightView.backgroundColor = [UIColor lightYellowColor];
     }
 }
@@ -148,8 +146,6 @@
 }
 
 - (IBAction)alertButtonPressed:(id)sender {
-   // self.playClickSound;
-    //self.disableButtonTemporarily;
 }
 
 - (void)viewWillAppear:(BOOL)animated
