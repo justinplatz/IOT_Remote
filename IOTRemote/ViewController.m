@@ -146,6 +146,9 @@
 }
 
 - (IBAction)alertButtonPressed:(id)sender {
+    [self playClickSound];
+    //[self disableButtonTemporarily];
+    //[self sendMessage];
 }
 
 - (void)viewWillAppear:(BOOL)animated
