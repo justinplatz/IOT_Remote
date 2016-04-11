@@ -81,31 +81,31 @@
 }
 
 -(void)addBordersToViews{
-    self.lightView.layer.borderColor = [UIColor lightYellowColor].CGColor;
+    self.lightView.layer.borderColor = [UIColor saffronYellow].CGColor;
     self.lightView.layer.borderWidth = 30.0f;
     
-    self.alertView.layer.borderColor = [UIColor darkBlueColor].CGColor;
+    self.alertView.layer.borderColor = [UIColor pictonBlue].CGColor;
     self.alertView.layer.borderWidth = 30.0f;
     
-    self.tvView.layer.borderColor = [UIColor darkRedColor].CGColor;
+    self.tvView.layer.borderColor = [UIColor sunsetOrange].CGColor;
     self.tvView.layer.borderWidth = 30.0f;
     
-    self.discoView.layer.borderColor = [UIColor lightGreenColor].CGColor;
+    self.discoView.layer.borderColor = [UIColor californiaYellow].CGColor;
     self.discoView.layer.borderWidth = 30.0f;
 
-    self.musicView.layer.borderColor = [UIColor lightBlueColor].CGColor;
+    self.musicView.layer.borderColor = [UIColor mediumPurple].CGColor;
     self.musicView.layer.borderWidth = 30.0f;
 
-    self.fanView.layer.borderColor = [UIColor lightOrangeColor].CGColor;
+    self.fanView.layer.borderColor = [UIColor shamrockGreen].CGColor;
     self.fanView.layer.borderWidth = 30.0f;
 }
 
 -(void)setAllViewsToGrayBackground{
     self.lightView.backgroundColor = [UIColor offGrayColor];
     self.fanView.backgroundColor   = [UIColor offGrayColor];
-    self.musicView.backgroundColor = [UIColor offGrayColor];
-    self.alertView.backgroundColor = [UIColor offGrayColor];
-    self.tvView.backgroundColor    = [UIColor offGrayColor];
+    self.musicView.backgroundColor = [UIColor mediumPurple];
+    self.alertView.backgroundColor = [UIColor pictonBlue];
+    self.tvView.backgroundColor    = [UIColor sunsetOrange];
     self.discoView.backgroundColor = [UIColor offGrayColor];
 }
 
@@ -126,44 +126,19 @@
     else{
         [self.lightButton setImage:[UIImage imageNamed:@"light_on.png"] forState:UIControlStateNormal];
         self.lightIsOn = YES;
-        self.lightView.backgroundColor = [UIColor lightYellowColor];
+        self.lightView.backgroundColor = [UIColor saffronYellow];
     }
-}
-
--(void)disableButtonTemporarily{
-    self.alertButton.enabled = NO;
-    [self.alertButton setImage:[UIImage imageNamed:@"alert_on.png"] forState:UIControlStateNormal];
-
-    self.alertView.backgroundColor = [UIColor darkBlueColor];
-    double delayInSeconds = 3.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds *   NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        self.alertButton.enabled = YES;
-        self.alertView.backgroundColor = [UIColor offGrayColor];
-        [self.alertButton setImage:[UIImage imageNamed:@"alert_off.png"] forState:UIControlStateNormal];
-
-    });
 }
 
 - (IBAction)alertButtonPressed:(id)sender {
     [self playClickSound];
-    //[self disableButtonTemporarily];
-    //[self sendMessage];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(buttonDidLongPress:)];
-    longPress.minimumPressDuration = 2.0;//this is the pressDuration
-    
-    [self.alertButton addGestureRecognizer:longPress];
 }
 
 - (void)sendMessage{
     NSString *kTwilioSID = @"ACf47ab7021aa158498f4fdb0bfc7685cb";
     NSString *kTwilioSecret = @"643e1be96d15f39bcc7f55cd92ef35c8";
     NSString *kFromNumber = @"+17084773770";
-    NSString *kToNumber = @"+17737322324";//replace you number here
+    NSString *kToNumber = @"+15164763716";//replace you number here
     NSString *kMessage = @"Tommy needs help!";
     
     NSString *urlString = [NSString
@@ -266,7 +241,7 @@
     else{
         [self.fanButton setImage:[UIImage imageNamed:@"fan_on.png"] forState:UIControlStateNormal];
         self.fanIsOn = YES;
-        self.fanView.backgroundColor = [UIColor lightOrangeColor];
+        self.fanView.backgroundColor = [UIColor shamrockGreen];
     }
 }
 
@@ -288,7 +263,7 @@
     else{
         [self.discoButton setImage:[UIImage imageNamed:@"disco_on.png"] forState:UIControlStateNormal];
         self.discoIsOn = YES;
-        self.discoView.backgroundColor = [UIColor lightGreenColor];
+        self.discoView.backgroundColor = [UIColor californiaYellow];
     }
 }
 
