@@ -30,7 +30,6 @@
 
 - (void)viewDidLoad
 {
-    
     self.homeView.layer.borderColor = [UIColor blackColor].CGColor;
     self.homeView.layer.borderWidth = 30.0f;
 }
@@ -65,6 +64,7 @@
      {
          NSError* err;
          NSLog(@"success %@",[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+         [self showSuccessImage];
          jsonArray=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments
                                                      error:&err];
          NSLog(@"JSON: %@", jsonArray);
@@ -72,6 +72,8 @@
      } failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
          NSLog(@"Error: %@, %@", error, operation.responseObject);
+         //Do something if we detect an error!
+         [self showErrorImage];
      }];
     
 }
@@ -79,18 +81,40 @@
 - (IBAction)playButtonPressed:(id)sender {
     [self sendMessage:@"I'm bored. Lets play!"];
     [self playClickSound];
+    [self disableAllButtons];
+
 }
 - (IBAction)foodButtonPressed:(id)sender {
     [self sendMessage:@"I'm hungry. Lets eat!"];
     [self playClickSound];
+    [self disableAllButtons];
+
 }
 - (IBAction)helpButtonPressed:(id)sender {
     [self sendMessage:@"I need some help. Please come!"];
     [self playClickSound];
+    [self disableAllButtons];
+
 }
 - (IBAction)bathroomButtonPressed:(id)sender {
     [self sendMessage:@"I need to use the bathroom. Please come!"];
     [self playClickSound];
+    [self disableAllButtons];
+
+}
+- (IBAction)hiButtonPressed:(id)sender {
+    [self sendMessage:@"I just wanted to say Hi!"];
+    [self playClickSound];
+    [self disableAllButtons];
+
+}
+
+-(void) disableAllButtons{
+    [self disableButtonTemporarily:self.playButton view:self.playView color:[UIColor sunsetOrange]];
+    [self disableButtonTemporarily:self.foodButton view:self.foodView color:[UIColor shamrockGreen]];
+    [self disableButtonTemporarily:self.helpButton view:self.helpView color:[UIColor mediumPurple]];
+    [self disableButtonTemporarily:self.bathroomButton view:self.bathroomView color:[UIColor californiaYellow]];
+    [self disableButtonTemporarily:self.hiButton view:self.hiView color:[UIColor pictonBlue]];
 }
 
 -(void)playClickSound{
@@ -103,5 +127,45 @@
     AudioServicesCreateSystemSoundID ((CFURLRef)CFBridgingRetain(soundUrl), &soundID);
     AudioServicesPlaySystemSound(soundID);
 }
+
+-(void)disableButtonTemporarily:(UIButton* )button view:(UIView*)view color:(UIColor*)color{
+    button.enabled = NO;
+    
+    view.backgroundColor = [UIColor offGrayColor];
+    double delayInSeconds = 5.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds *   NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        button.enabled = YES;
+        view.backgroundColor = color;
+
+    });
+}
+
+-(void)showErrorImage{
+    UIImageView *overlayView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,self.view.frame.size.width,self.view.frame.size.height)];
+    overlayView.image = [UIImage imageNamed:@"messageFail.png"];
+    overlayView.backgroundColor = [UIColor whiteSmoke];
+    [self.view.window addSubview:overlayView];
+    
+    double delayInSeconds = 5.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds *   NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [overlayView removeFromSuperview];
+    });
+}
+
+-(void)showSuccessImage{
+    UIImageView *overlayView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,self.view.frame.size.width,self.view.frame.size.height)];
+    overlayView.image = [UIImage imageNamed:@"messageSent.png"];
+    overlayView.backgroundColor = [UIColor whiteSmoke];
+    [self.view.window addSubview:overlayView];
+    
+    double delayInSeconds = 5.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds *   NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [overlayView removeFromSuperview];
+    });
+}
+
 
 @end
