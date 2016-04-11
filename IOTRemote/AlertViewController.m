@@ -145,8 +145,14 @@
     UIImageView *overlayView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,self.view.frame.size.width,self.view.frame.size.height)];
     overlayView.image = [UIImage imageNamed:@"messageFail.png"];
     overlayView.backgroundColor = [UIColor whiteSmoke];
-    [self.view.window addSubview:overlayView];
     
+    CATransition *transition = [CATransition animation];
+    transition.duration = 1.5;
+    transition.type = kCATransitionPush; //choose your animation
+    [overlayView.layer addAnimation:transition forKey:nil];
+    
+    [self.view.window addSubview:overlayView];
+
     double delayInSeconds = 5.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds *   NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
@@ -158,6 +164,12 @@
     UIImageView *overlayView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,self.view.frame.size.width,self.view.frame.size.height)];
     overlayView.image = [UIImage imageNamed:@"messageSent.png"];
     overlayView.backgroundColor = [UIColor whiteSmoke];
+    
+    CATransition *transition = [CATransition animation];
+    transition.duration = 1.5;
+    transition.type = kCATransitionPush; //choose your animation
+    [overlayView.layer addAnimation:transition forKey:nil];
+    
     [self.view.window addSubview:overlayView];
     
     double delayInSeconds = 5.0;
