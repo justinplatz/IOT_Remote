@@ -50,6 +50,8 @@
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timedJob) userInfo:nil repeats:YES];
     [self.timer fire];
+    self.homeView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.homeView.layer.borderWidth = 20.0f;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -86,23 +88,23 @@
 }
 
 -(void)addBordersToViews{
-    self.backwardView.layer.backgroundColor = [UIColor lightYellowColor].CGColor;
+    self.backwardView.layer.backgroundColor = [UIColor sunsetOrange].CGColor;
     
-    self.playpauseView.layer.backgroundColor = [UIColor darkBlueColor].CGColor;
+    self.playpauseView.layer.backgroundColor = [UIColor shamrockGreen].CGColor;
     
-    self.nextView.layer.backgroundColor = [UIColor darkRedColor].CGColor;
+    self.nextView.layer.backgroundColor = [UIColor pictonBlue].CGColor;
     
-    self.posistionView.layer.backgroundColor = [UIColor lightGreenColor].CGColor;
+    self.posistionView.layer.backgroundColor = [UIColor whiteSmoke].CGColor;
     
-    self.songInfoView.layer.backgroundColor = [UIColor lightGreenColor].CGColor;
+    self.songInfoView.layer.backgroundColor = [UIColor whiteSmoke].CGColor;
     
     self.songArtView.layer.backgroundColor = [UIColor lightBlueColor].CGColor;
     
-    self.homeView.layer.backgroundColor = [UIColor lightYellowColor].CGColor;
+    self.homeView.layer.backgroundColor = [UIColor saffronYellow].CGColor;
     
-    self.volumeUpView.layer.backgroundColor = [UIColor darkBlueColor].CGColor;
+    self.volumeUpView.layer.backgroundColor = [UIColor pictonBlue].CGColor;
     
-    self.volumeDownView.layer.backgroundColor = [UIColor darkRedColor].CGColor;
+    self.volumeDownView.layer.backgroundColor = [UIColor sunsetOrange].CGColor;
 }
 
 - (void)musicPlayer:(GVMusicPlayerController *)musicPlayer playbackStateChanged:(MPMusicPlaybackState)playbackState previousPlaybackState:(MPMusicPlaybackState)previousPlaybackState {
