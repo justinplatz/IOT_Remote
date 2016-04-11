@@ -31,6 +31,8 @@
 - (void)viewDidLoad
 {
     
+    self.homeView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.homeView.layer.borderWidth = 30.0f;
 }
 
 - (void)viewWillAppear:(BOOL)animated
