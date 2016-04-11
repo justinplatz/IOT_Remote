@@ -47,11 +47,12 @@
     [super viewDidLoad];
     [self addBordersToViews];
     
-    
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timedJob) userInfo:nil repeats:YES];
     [self.timer fire];
+    
     self.homeView.layer.borderColor = [UIColor blackColor].CGColor;
     self.homeView.layer.borderWidth = 20.0f;
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -129,7 +130,6 @@
         self.songImageView.image = [artwork imageWithSize:self.songArtView.frame.size];
     }
     
-    
     if ([GVMusicPlayerController sharedInstance].playbackState != MPMusicPlaybackStatePlaying) {
         [self.playPauseButton setImage:[UIImage imageNamed:@"Controls_Play.png"] forState:UIControlStateNormal];
     } else {
@@ -152,13 +152,12 @@
         [GVMusicPlayerController sharedInstance].shuffleMode = MPMusicShuffleModeSongs;
         #if !(TARGET_IPHONE_SIMULATOR)
         MPMediaQuery *query = [MPMediaQuery songsQuery];
+        [query addFilterPredicate:[MPMediaPropertyPredicate predicateWithValue:[NSNumber numberWithBool:NO] forProperty:MPMediaItemPropertyIsCloudItem]];
         [[GVMusicPlayerController sharedInstance] setQueueWithQuery:query];
         [[GVMusicPlayerController sharedInstance] play];
         #endif
         [self.playPauseButton setImage:[UIImage imageNamed:@"Controls_Pause.png"] forState:UIControlStateNormal];
     }
-    
-    
 }
 
 - (IBAction)backwardButtonPressed:(id)sender {
@@ -201,5 +200,6 @@
     [GVMusicPlayerController sharedInstance].currentPlaybackTime = self.progressSlider.value;
     self.panningProgress = NO;
 }
+
 
 @end
