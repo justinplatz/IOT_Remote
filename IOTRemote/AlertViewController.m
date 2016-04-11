@@ -8,6 +8,23 @@
 
 #import "AlertViewController.h"
 #import "AFHTTPRequestOperationManager.h"
+#import "UIColor+IOTRemote_Colors.h"
+
+@interface AlertViewController ()
+@property (strong, nonatomic) IBOutlet UIView *helpView;
+@property (strong, nonatomic) IBOutlet UIButton *helpButton;
+@property (strong, nonatomic) IBOutlet UIView *homeView;
+@property (strong, nonatomic) IBOutlet UIView *homeButton;
+@property (strong, nonatomic) IBOutlet UIView *foodView;
+@property (strong, nonatomic) IBOutlet UIButton *foodButton;
+@property (strong, nonatomic) IBOutlet UIView *bathroomView;
+@property (strong, nonatomic) IBOutlet UIButton *bathroomButton;
+@property (strong, nonatomic) IBOutlet UIView *playView;
+@property (strong, nonatomic) IBOutlet UIButton *playButton;
+@property (strong, nonatomic) IBOutlet UIView *hiView;
+@property (strong, nonatomic) IBOutlet UIButton *hiButton;
+
+@end
 
 @implementation AlertViewController: UIViewController
 
