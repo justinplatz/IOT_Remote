@@ -135,31 +135,6 @@
     }
     
     self.nowPlayingSong = nowPlayingItem;
-    //[self saveAlbumArt:nowPlayingItem];
-}
-
-
-
--(void)saveAlbumArt:(MPMediaItem *)nowPlayingItem
-{
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    NSData *myEncodedObject = [NSKeyedArchiver archivedDataWithRootObject:nowPlayingItem.artwork];
-    [prefs setObject:myEncodedObject forKey:@"albumArtwork"];
-    [prefs synchronize];
-}
-
--(void) setAlbumArt:(MPMediaItem *)nowPlayingItem{
-//    // Artwork
-//    MPMediaItemArtwork *artwork = [nowPlayingItem valueForProperty:MPMediaItemPropertyArtwork];
-//    if (artwork != nil) {
-//        self.songImageView.image = [artwork imageWithSize:self.songArtView.frame.size];
-//    }
-//    
-//    NSData* imageData = [[NSUserDefaults standardUserDefaults] objectForKey:@"albumArtwork"];
-//    UIImage* image = [UIImage imageWithData:imageData];
-//    if (image != NULL) {
-//        self.songImageView.image = image;
-//    }
 }
 
 - (IBAction)playpauseButton:(id)sender {
