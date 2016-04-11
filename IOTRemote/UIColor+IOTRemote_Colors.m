@@ -40,13 +40,44 @@
     return [UIColor colorWithRed:1 green:0.576 blue:0 alpha:1]; /*#ff9300*/
 }
 
-
 + (UIColor *)offGrayColor
 {
     return [UIColor colorWithRed:0.741 green:0.765 blue:0.78 alpha:1]; /*#bdc3c7*/
 }
 
++ (UIColor *)saffronYellow
+{
+    return [UIColor colorWithRed:0.957 green:0.816 blue:0.247 alpha:1]; /*#f4d03f*/
+}
 
++ (UIColor *)shamrockGreen
+{
+    return [UIColor colorWithRed:0.18 green:0.8 blue:0.443 alpha:1]; /*#2ecc71*/
+}
 
++ (UIColor *)californiaYellow
+{
+    return [UIColor colorWithRed:0.973 green:0.58 blue:0.024 alpha:1]; /*#f89406*/
+}
+
++ (UIColor *)pictonBlue
+{
+    return [UIColor colorWithRed:0.349 green:0.671 blue:0.89 alpha:1]; /*#59abe3*/
+}
+
++ (UIColor *)sunsetOrange
+{
+    return [UIColor colorWithRed:0.965 green:0.278 blue:0.278 alpha:1]; /*#f64747*/
+}
+
++ (UIColor *)mediumPurple
+{
+    return [UIColor colorWithRed:0.749 green:0.333 blue:0.925 alpha:1]; /*#bf55ec*/
+}
+
++ (UIColor *)whiteSmoke
+{
+    return [UIColor colorWithRed:0.925 green:0.925 blue:0.925 alpha:1]; /*#ececec*/
+}
 
 @end

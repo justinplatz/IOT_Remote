@@ -17,4 +17,12 @@
 + (UIColor *)lightGreenColor;
 + (UIColor *)lightBlueColor;
 + (UIColor *)lightOrangeColor;
++ (UIColor *)saffronYellow;
++ (UIColor *)shamrockGreen;
++ (UIColor *)californiaYellow;
++ (UIColor *)pictonBlue;
++ (UIColor *)sunsetOrange;
++ (UIColor *)mediumPurple;
++ (UIColor *)whiteSmoke;
+
 @end
