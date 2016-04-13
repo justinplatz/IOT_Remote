@@ -57,10 +57,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [[GVMusicPlayerController sharedInstance] addDelegate:self];
-    [GVMusicPlayerController sharedInstance].repeatMode = MPMusicRepeatModeAll;
-    
-    self.nowPlayingSong = [[GVMusicPlayerController sharedInstance] nowPlayingItem];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -72,6 +68,10 @@
     [super viewDidAppear:animated];
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     [self becomeFirstResponder];
+    
+    [[GVMusicPlayerController sharedInstance] addDelegate:self];
+    [GVMusicPlayerController sharedInstance].repeatMode = MPMusicRepeatModeAll;
+    self.nowPlayingSong = [[GVMusicPlayerController sharedInstance] nowPlayingItem];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
