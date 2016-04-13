@@ -28,6 +28,12 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.2.0):
     - CocoaLumberjack/Default
+  - google-cast-sdk (2.10.4):
+    - google-cast-sdk/Assets (= 2.10.4)
+    - google-cast-sdk/Core (= 2.10.4)
+  - google-cast-sdk/Assets (2.10.4):
+    - google-cast-sdk/Core
+  - google-cast-sdk/Core (2.10.4)
   - PubNub (4.3.0):
     - CocoaLumberjack (= 2.2.0)
     - PubNub/Core (= 4.3.0)
@@ -36,11 +42,13 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.4)
+  - google-cast-sdk (~> 2.10)
   - PubNub
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  google-cast-sdk: eb83ef6b875969e765011c457b254539c0978792
   PubNub: a05f2a2c6cc1f637a0c473f236c4671c0b8c09b1
 
 COCOAPODS: 0.39.0

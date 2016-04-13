@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A40FCEA23D34B5C4660C0697'
-               BlueprintName = 'AFNetworking'
+               BlueprintIdentifier = 'ECB0921BD26AD4A2EAD49EA8'
+               BlueprintName = 'CocoaLumberjack'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'AFNetworking.framework'>
+               BuildableName = 'CocoaLumberjack.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

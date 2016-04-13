@@ -80,4 +80,14 @@
     return [UIColor colorWithRed:0.925 green:0.925 blue:0.925 alpha:1]; /*#ececec*/
 }
 
++ (UIColor *)babyBlue
+{
+    return [UIColor colorWithRed:0.349 green:0.671 blue:0.89 alpha:1];
+}
+
++(UIColor *)emerald
+{
+    return [UIColor colorWithRed:0.247 green:0.765 blue:0.502 alpha:1];
+}
+
 @end

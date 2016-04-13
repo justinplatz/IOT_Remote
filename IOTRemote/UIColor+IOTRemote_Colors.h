@@ -24,5 +24,7 @@
 + (UIColor *)sunsetOrange;
 + (UIColor *)mediumPurple;
 + (UIColor *)whiteSmoke;
++ (UIColor *)babyBlue;
++ (UIColor *)emerald;
 
 @end
