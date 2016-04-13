@@ -52,7 +52,6 @@
     
     self.homeView.layer.borderColor = [UIColor blackColor].CGColor;
     self.homeView.layer.borderWidth = 20.0f;
-
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -126,8 +125,9 @@
     
     // Artwork
     MPMediaItemArtwork *artwork = [nowPlayingItem valueForProperty:MPMediaItemPropertyArtwork];
-    if (artwork != nil) {
-        self.songImageView.image = [artwork imageWithSize:self.songArtView.frame.size];
+    if (artwork) {
+        UIImage* artworkImage = [artwork imageWithSize: self.songArtView.bounds.size];
+        self.songImageView.image = artworkImage;
     }
     
     if ([GVMusicPlayerController sharedInstance].playbackState != MPMusicPlaybackStatePlaying) {
@@ -137,6 +137,31 @@
     }
     
     self.nowPlayingSong = nowPlayingItem;
+    
+    /* make sure the have iOS 5 by checking for the applicable class. */
+    // Step 1: Check for iOS 5
+    if ([MPNowPlayingInfoCenter class] && self.nowPlayingSong != nil)
+    {
+        // Step 2: image and track name
+        MPMediaItemArtwork *albumArt = [nowPlayingItem valueForProperty:MPMediaItemPropertyArtwork];
+        
+        NSString *trackName = [nowPlayingItem valueForProperty:MPMediaItemPropertyTitle];
+        
+        // Step 3: Create arrays
+        NSArray *objs = [NSArray arrayWithObjects:
+                         trackName,
+                         albumArt, nil];
+        
+        NSArray *keys = [NSArray arrayWithObjects:
+                         MPMediaItemPropertyTitle,
+                         MPMediaItemPropertyArtwork, nil];
+        
+        // Step 4: Create dictionary.
+        NSDictionary *currentTrackInfo = [NSDictionary dictionaryWithObjects:objs forKeys:keys];
+        
+        // Step 5: Set now playing info
+        [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = currentTrackInfo;
+    }
 }
 
 - (IBAction)playpauseButton:(id)sender {
@@ -171,11 +196,12 @@
 - (IBAction)homeButtonTapped:(id)sender {
     
 }
+
 - (IBAction)volumeUpTapped:(id)sender {
     float vol = [[AVAudioSession sharedInstance] outputVolume];
     [[GVMusicPlayerController sharedInstance] setVolume:vol+.05];
-
 }
+
 - (IBAction)volumeDownTapped:(id)sender {
     float vol = [[AVAudioSession sharedInstance] outputVolume];
     [[GVMusicPlayerController sharedInstance] setVolume:vol-.05];
@@ -200,6 +226,5 @@
     [GVMusicPlayerController sharedInstance].currentPlaybackTime = self.progressSlider.value;
     self.panningProgress = NO;
 }
-
 
 @end
