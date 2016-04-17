@@ -37,7 +37,10 @@ GCKMediaControlChannelDelegate>{
 @implementation VideoController
 
 
-
+NSArray *vidLinks;
+unsigned long vidIndex;
+NSURL *currentPlaying;
+float GCvol;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,6 +49,9 @@ GCKMediaControlChannelDelegate>{
     self.homeView.layer.borderWidth = 15.0f;
     _isPlayingOnChromeCast = NO;
     _isPlayingLocally = NO;
+    [self loadVideoLinks];
+    //unsigned long size = vidLinks.count;
+    //NSLog(@"%ld", size);
     
     kReceiverAppID= kGCKMediaDefaultReceiverApplicationID;
     // Establish filter criteria.
@@ -58,11 +64,14 @@ GCKMediaControlChannelDelegate>{
     [_deviceScanner addListener:self];
     [_deviceScanner startScan];
     [_deviceScanner setPassiveScan:YES];
+    GCvol = 0.5;
     
     if(_localPlayer == nil){
         _localPlayer = [[AVPlayerViewController alloc] init];
-        NSURL *dropBoxVid = [NSURL URLWithString:@"https://dl.dropbox.com/s/x2d5zfxl9hf6jq4/messiTop10.mp4"];
-        _localPlayer.player = [AVPlayer playerWithURL:dropBoxVid];
+        vidIndex = 0;
+        [self disablePrevButton];
+        currentPlaying = [NSURL URLWithString:vidLinks[0]];
+        _localPlayer.player = [AVPlayer playerWithURL:currentPlaying];
     }
     
     
@@ -74,11 +83,23 @@ GCKMediaControlChannelDelegate>{
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
+    
+}
+
+-(void)loadVideoLinks{
+    NSFileManager *fileManager;
+    fileManager = [NSFileManager defaultManager];
+    NSString *bundle = [[NSBundle mainBundle] bundlePath];
+    NSString *pathToDropBox = [bundle stringByAppendingPathComponent:@"dbVidLinks.txt"];
+    NSString *data = [NSString stringWithContentsOfFile:pathToDropBox encoding:NSUTF8StringEncoding error:nil];
+    vidLinks = [data componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 }
 
 -(void)playVideoLocally{
-    _localPlayer.view.frame = CGRectMake(8, 17, 1008, 567);
-    _localPlayer.showsPlaybackControls = NO;
+    if(!_isPlayingLocally) _isPlayingLocally = YES;
+    _localPlayer.view.frame = CGRectMake(8, 17, 891, 567);
+    _localPlayer.showsPlaybackControls = YES;
+    _localPlayer.player.volume = 0.5;
     [self addChildViewController:_localPlayer];
     [self.view addSubview:_localPlayer.view];
     [_localPlayer didMoveToParentViewController:self];
@@ -87,35 +108,63 @@ GCKMediaControlChannelDelegate>{
 
 
 
-//------------------------------------BUTTONS---------------------------------//
+//---------------------------------------------BUTTONS--------------------------------------------//
 - (IBAction)prevBtn:(UIButton *)sender {
+    if(_isPlayingLocally){
+        if(vidIndex == (vidLinks.count - 1)) [self enableNextButton];
+        if(_localPlayer.player.rate == 1) [_localPlayer.player pause];
+    
+        currentPlaying = [NSURL URLWithString:vidLinks[vidIndex - 1]];
+        --vidIndex;
+        if(vidIndex == 0) [self disablePrevButton];
+        _localPlayer.player = [AVPlayer playerWithURL:currentPlaying];
+        
+        [self playVideoLocally];
+        [self disableHomeButton];
+        [self.playPauseChanger setImage:[UIImage imageNamed:@"Controls_Pause.png"] forState:UIControlStateNormal];
+    }
+    else if(_isPlayingOnChromeCast){
+        if(vidIndex == (vidLinks.count - 1)) [self enableNextButton];
+        --vidIndex;
+        [self castVideo];
+        if(vidIndex == 0) [self disablePrevButton];
+    }
 }
 
 - (IBAction)playPauseBtn:(UIButton *)sender {
-    if((!_isPlayingLocally && !_isPlayingOnChromeCast) || _isPlayingLocally){
-        if(!_isPlayingLocally){
+    if((!_isPlayingLocally && !_isPlayingOnChromeCast) || _isPlayingLocally)
+    {
+        if(!_isPlayingLocally)
+        {
             _isPlayingLocally = YES;
-            [self playVideoLocally];
             [sender setImage:[UIImage imageNamed:@"Controls_Pause.png"] forState:UIControlStateNormal];
+            [self disableHomeButton];
+            [self playVideoLocally];
             return;
         }
-        else if(_localPlayer.player.rate == 0){
+        else if(_localPlayer.player.rate == 0)
+        {
             [_localPlayer.player play];
             [sender setImage:[UIImage imageNamed:@"Controls_Pause.png"] forState:UIControlStateNormal];
+            [self disableHomeButton];
         }
-        else if(_localPlayer.player.rate == 1){
+        else if(_localPlayer.player.rate == 1)
+        {
             [_localPlayer.player pause];
             [sender setImage:[UIImage imageNamed:@"Controls_Play.png"] forState:UIControlStateNormal];
+            [self enableHomeButton];
         }
     }
     else{
         if(_mediaControlChannel.mediaStatus.playerState == GCKMediaPlayerStatePlaying){
             [_mediaControlChannel pause];
             [sender setImage:[UIImage imageNamed:@"Controls_Play.png"] forState:UIControlStateNormal];
+            [self enableHomeButton];
         }
         else if(_mediaControlChannel.mediaStatus.playerState == GCKMediaPlayerStatePaused){
             [_mediaControlChannel play];
             [sender setImage:[UIImage imageNamed:@"Controls_Pause.png"] forState:UIControlStateNormal];
+            [self disableHomeButton];
         }
         
     }
@@ -124,6 +173,24 @@ GCKMediaControlChannelDelegate>{
 }
 
 - (IBAction)nextBtn:(UIButton *)sender {
+    if((!_isPlayingLocally && !_isPlayingOnChromeCast) || _isPlayingLocally){
+        if(_localPlayer.player.rate == 1) [_localPlayer.player pause];
+        if(vidIndex == 0) [self enablePrevButton];
+        
+        currentPlaying = [NSURL URLWithString:vidLinks[vidIndex + 1]];
+        ++vidIndex;
+        if(vidIndex == (vidLinks.count - 1)) [self disableNextButton];
+        _localPlayer.player = [AVPlayer playerWithURL:currentPlaying];
+        [self playVideoLocally];
+        [self disableHomeButton];
+        [self.playPauseChanger setImage:[UIImage imageNamed:@"Controls_Pause.png"] forState:UIControlStateNormal];
+    }
+    else if(_isPlayingOnChromeCast){
+        if(vidIndex == 0) [self enablePrevButton];
+        ++vidIndex;
+        [self castVideo];
+        if(vidIndex == (vidLinks.count - 1)) [self disableNextButton];
+    }
 }
 
 - (IBAction)homeBtn:(UIButton *)sender {
@@ -153,6 +220,38 @@ GCKMediaControlChannelDelegate>{
     }
 }
 
+- (IBAction)volumeUpBtn:(UIButton *)sender {
+    if(_isPlayingLocally){
+        if(_localPlayer.player.volume < 1)_localPlayer.player.volume += .1;
+    }
+    else if(_isPlayingOnChromeCast){
+        if(_mediaControlChannel.mediaStatus.playerState == GCKMediaPlayerStatePlaying ||
+           _mediaControlChannel.mediaStatus.playerState == GCKMediaPlayerStatePaused)
+        {
+            if(GCvol < 1){
+                GCvol += .1;
+                [_mediaControlChannel setStreamVolume:GCvol];
+            }
+        }
+    }
+}
+
+- (IBAction)volumeDownBtn:(UIButton *)sender {
+    if(_isPlayingLocally){
+        if(_localPlayer.player.volume > 0)_localPlayer.player.volume -= .1;
+    }
+    else if(_isPlayingOnChromeCast){
+        if(_mediaControlChannel.mediaStatus.playerState == GCKMediaPlayerStatePlaying ||
+           _mediaControlChannel.mediaStatus.playerState == GCKMediaPlayerStatePaused)
+        {
+            if(GCvol > 0){
+                GCvol -= .1;
+                [_mediaControlChannel setStreamVolume:GCvol];
+            }
+        }
+    }
+}
+
 
 -(void)addBordersToViews{
     self.prevView.layer.backgroundColor = [UIColor sunsetOrange].CGColor;
@@ -160,8 +259,45 @@ GCKMediaControlChannelDelegate>{
     self.nextView.layer.backgroundColor = [UIColor babyBlue].CGColor;
     self.homeView.layer.backgroundColor = [UIColor saffronYellow].CGColor;
     self.castView.layer.backgroundColor = [UIColor lightOrangeColor].CGColor;
+    self.volumeDownView.layer.backgroundColor = [UIColor babyBlue].CGColor;
+    self.volumeUpView.layer.backgroundColor = [UIColor sunsetOrange].CGColor;
+    
 }
-//--------------------------------CHROMECAST----------------------------------//
+
+-(void)disablePrevButton{
+    self.prevChanger.enabled = NO;
+    [self.prevChanger setImage:nil forState:UIControlStateNormal];
+    self.prevView.layer.backgroundColor = [UIColor blackColor].CGColor;
+}
+
+-(void)enablePrevButton{
+    self.prevChanger.enabled = YES;
+    [self.prevChanger setImage:[UIImage imageNamed:@"Controls_Back.png"]  forState:UIControlStateNormal];
+    self.prevView.layer.backgroundColor = [UIColor sunsetOrange].CGColor;
+}
+
+-(void)disableNextButton{
+    self.nextChanger.enabled = NO;
+    [self.nextChanger setImage:nil forState:UIControlStateNormal];
+    self.nextView.layer.backgroundColor = [UIColor blackColor].CGColor;
+}
+
+-(void)enableNextButton{
+    self.nextChanger.enabled = YES;
+    [self.nextChanger setImage:[UIImage imageNamed:@"Controls_Skip.png"]  forState:UIControlStateNormal];
+    self.nextView.layer.backgroundColor = [UIColor babyBlue].CGColor;
+}
+
+-(void)disableHomeButton{
+    self.homeDisabler.enabled = NO;
+    self.homeView.layer.backgroundColor = [UIColor blackColor].CGColor;
+}
+
+-(void)enableHomeButton{
+    self.homeDisabler.enabled = YES;
+    self.homeView.layer.backgroundColor = [UIColor saffronYellow].CGColor;
+}
+//--------------------------------------------CHROMECAST-----------------------------------------------------//
 
 - (void)updateStatsFromDevice {
     
@@ -229,8 +365,7 @@ GCKMediaControlChannelDelegate>{
     // Define Media information.
     // [START load-media]
     GCKMediaInformation *mediaInformation =
-    [[GCKMediaInformation alloc] initWithContentID:
-     @"https://dl.dropbox.com/s/x2d5zfxl9hf6jq4/messiTop10.mp4"
+    [[GCKMediaInformation alloc] initWithContentID:vidLinks[vidIndex]
                                         streamType:GCKMediaStreamTypeNone
                                        contentType:@"video/mp4"
                                           metadata:nil

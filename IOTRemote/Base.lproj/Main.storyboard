@@ -1447,10 +1447,10 @@
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EXW-js-ImC">
-                                <rect key="frame" x="613" y="585" width="200" height="183"/>
+                                <rect key="frame" x="613" y="585" width="209" height="183"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llF-ph-tZv">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="183"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="209" height="183"/>
                                         <state key="normal" image="home"/>
                                         <connections>
                                             <action selector="homeBtn:" destination="nfs-Sl-DfX" eventType="touchUpInside" id="rgI-Sw-kIZ"/>
@@ -1460,13 +1460,37 @@
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WoN-HZ-i1j">
-                                <rect key="frame" x="815" y="585" width="200" height="183"/>
+                                <rect key="frame" x="823" y="585" width="200" height="183"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0p-MB-KRv">
                                         <rect key="frame" x="46" y="37" width="108" height="108"/>
                                         <state key="normal" image="CastIcon"/>
                                         <connections>
                                             <action selector="castBtn:" destination="nfs-Sl-DfX" eventType="touchUpInside" id="f3y-4E-8kl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ecK-A8-56y">
+                                <rect key="frame" x="900" y="17" width="123" height="284"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp7-SF-nmn">
+                                        <rect key="frame" x="0.0" y="66" width="123" height="151"/>
+                                        <state key="normal" image="volumeUp"/>
+                                        <connections>
+                                            <action selector="volumeUpBtn:" destination="nfs-Sl-DfX" eventType="touchUpInside" id="0BC-vO-WwF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gS1-49-LWO">
+                                <rect key="frame" x="900" y="301" width="123" height="284"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNH-wd-Hg1">
+                                        <rect key="frame" x="0.0" y="66" width="123" height="151"/>
+                                        <state key="normal" image="volumeDown"/>
+                                        <connections>
+                                            <action selector="volumeDownBtn:" destination="nfs-Sl-DfX" eventType="touchUpInside" id="Cho-qI-l2C"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1478,11 +1502,16 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="castView" destination="WoN-HZ-i1j" id="lO2-Ao-NoE"/>
+                        <outlet property="homeDisabler" destination="llF-ph-tZv" id="R9l-Av-FyI"/>
                         <outlet property="homeView" destination="EXW-js-ImC" id="LOv-rJ-wcr"/>
-                        <outlet property="nextView" destination="aHU-6y-fau" id="o1z-fq-zEW"/>
+                        <outlet property="nextChanger" destination="aHU-6y-fau" id="e7p-L8-11R"/>
+                        <outlet property="nextView" destination="fHk-u4-cTK" id="dxd-g9-hpk"/>
                         <outlet property="playPauseChanger" destination="mSq-zL-IYf" id="xkF-1s-G1w"/>
                         <outlet property="playPauseView" destination="4JG-cD-Mmo" id="she-Bq-ng6"/>
+                        <outlet property="prevChanger" destination="VIi-JF-opC" id="iHm-g5-uHl"/>
                         <outlet property="prevView" destination="I43-LT-Vuq" id="nQP-RS-Dgh"/>
+                        <outlet property="volumeDownView" destination="gS1-49-LWO" id="2YA-0F-qYg"/>
+                        <outlet property="volumeUpView" destination="ecK-A8-56y" id="4BO-Tk-YeJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKj-HV-UQV" userLabel="First Responder" sceneMemberID="firstResponder"/>

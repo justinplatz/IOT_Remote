@@ -29,6 +29,8 @@
 		09F8CF141C7B6378008A199A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F8CF131C7B6377008A199A /* Assets.xcassets */; };
 		09F8CF161C7B640D008A199A /* click_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09F8CF151C7B640D008A199A /* click_sound.mp3 */; };
 		1745E2EC1CBEE6670085EBB6 /* VideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1745E2EB1CBEE6670085EBB6 /* VideoController.m */; };
+		1745E2EE1CBF260E0085EBB6 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1745E2ED1CBF260E0085EBB6 /* AVKit.framework */; };
+		17F1DAE71CBF32630057BF8B /* dbVidLinks.txt in Resources */ = {isa = PBXBuildFile; fileRef = 17F1DAE61CBF32630057BF8B /* dbVidLinks.txt */; };
 		B271AB505B2A59FCB299D792 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A950E0AA6E74298BB5BD09 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,8 @@
 		09F8CF151C7B640D008A199A /* click_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click_sound.mp3; sourceTree = "<group>"; };
 		1745E2EA1CBEE6670085EBB6 /* VideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoController.h; sourceTree = "<group>"; };
 		1745E2EB1CBEE6670085EBB6 /* VideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoController.m; sourceTree = "<group>"; };
+		1745E2ED1CBF260E0085EBB6 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		17F1DAE61CBF32630057BF8B /* dbVidLinks.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dbVidLinks.txt; sourceTree = "<group>"; };
 		28A950E0AA6E74298BB5BD09 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		523CE7818C565DAA9647345D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		935ADF64484C656E5609A287 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1745E2EE1CBF260E0085EBB6 /* AVKit.framework in Frameworks */,
 				0987AEC01CAC41EE00015565 /* MediaPlayer.framework in Frameworks */,
 				0987AEBE1CAC41E400015565 /* AVFoundation.framework in Frameworks */,
 				0987AEBC1CAC41DE00015565 /* AudioToolbox.framework in Frameworks */,
@@ -130,6 +135,7 @@
 				090ADC2D1CAC43C9003DC3FB /* MusicViewController.m */,
 				1745E2EA1CBEE6670085EBB6 /* VideoController.h */,
 				1745E2EB1CBEE6670085EBB6 /* VideoController.m */,
+				17F1DAE61CBF32630057BF8B /* dbVidLinks.txt */,
 			);
 			path = IOTRemote;
 			sourceTree = "<group>";
@@ -156,6 +162,7 @@
 		D6C1764FD581717E9F27CD1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1745E2ED1CBF260E0085EBB6 /* AVKit.framework */,
 				0987AEBF1CAC41EE00015565 /* MediaPlayer.framework */,
 				0987AEBD1CAC41E400015565 /* AVFoundation.framework */,
 				0987AEBB1CAC41DE00015565 /* AudioToolbox.framework */,
@@ -201,7 +208,7 @@
 				TargetAttributes = {
 					09B9F16B1C7A8E9B00461512 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = Y23869BQEL;
+						DevelopmentTeam = RYV9S2JXHE;
 					};
 				};
 			};
@@ -233,6 +240,7 @@
 				092668FE1CA1970E004671CB /* YO in Resources */,
 				090ADC2B1CAC438C003DC3FB /* GVMusicPlayerController in Resources */,
 				09F8CF141C7B6378008A199A /* Assets.xcassets in Resources */,
+				17F1DAE71CBF32630057BF8B /* dbVidLinks.txt in Resources */,
 				09B9F17A1C7A8E9B00461512 /* Main.storyboard in Resources */,
 				09F8CF161C7B640D008A199A /* click_sound.mp3 in Resources */,
 				09E623E61CBAF9D200027956 /* Info.plist in Resources */,
@@ -421,7 +429,7 @@
 				INFOPLIST_FILE = IOTRemote/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = IOTRemote;
+				PRODUCT_BUNDLE_IDENTIFIER = "test-IOT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -437,7 +445,7 @@
 				INFOPLIST_FILE = IOTRemote/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = IOTRemote;
+				PRODUCT_BUNDLE_IDENTIFIER = "test-IOT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
