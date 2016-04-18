@@ -69,7 +69,7 @@ float GCvol;
     if(_localPlayer == nil){
         _localPlayer = [[AVPlayerViewController alloc] init];
         vidIndex = 0;
-        [self disablePrevButton];
+        //[self disablePrevButton];
         currentPlaying = [NSURL URLWithString:vidLinks[0]];
         _localPlayer.player = [AVPlayer playerWithURL:currentPlaying];
     }
@@ -111,12 +111,12 @@ float GCvol;
 //---------------------------------------------BUTTONS--------------------------------------------//
 - (IBAction)prevBtn:(UIButton *)sender {
     if(_isPlayingLocally){
-        if(vidIndex == (vidLinks.count - 1)) [self enableNextButton];
+        //if(vidIndex == (vidLinks.count - 1)) [self enableNextButton];
         if(_localPlayer.player.rate == 1) [_localPlayer.player pause];
     
-        currentPlaying = [NSURL URLWithString:vidLinks[vidIndex - 1]];
-        --vidIndex;
-        if(vidIndex == 0) [self disablePrevButton];
+        if(vidIndex == 0) vidIndex = vidLinks.count - 1;
+        else --vidIndex;
+        currentPlaying = [NSURL URLWithString:vidLinks[vidIndex]];
         _localPlayer.player = [AVPlayer playerWithURL:currentPlaying];
         
         [self playVideoLocally];
@@ -124,10 +124,9 @@ float GCvol;
         [self.playPauseChanger setImage:[UIImage imageNamed:@"Controls_Pause.png"] forState:UIControlStateNormal];
     }
     else if(_isPlayingOnChromeCast){
-        if(vidIndex == (vidLinks.count - 1)) [self enableNextButton];
-        --vidIndex;
+        if(vidIndex == 0) vidIndex = vidLinks.count - 1;
+        else --vidIndex;
         [self castVideo];
-        if(vidIndex == 0) [self disablePrevButton];
     }
 }
 
@@ -172,28 +171,31 @@ float GCvol;
     
 }
 
+//CHANGE SO BUTTONS DON'T DISAPPEAR SAME WITH PREV AND HOME
 - (IBAction)nextBtn:(UIButton *)sender {
     if((!_isPlayingLocally && !_isPlayingOnChromeCast) || _isPlayingLocally){
         if(_localPlayer.player.rate == 1) [_localPlayer.player pause];
-        if(vidIndex == 0) [self enablePrevButton];
+        //if(vidIndex == 0) [self enablePrevButton];
         
-        currentPlaying = [NSURL URLWithString:vidLinks[vidIndex + 1]];
-        ++vidIndex;
-        if(vidIndex == (vidLinks.count - 1)) [self disableNextButton];
+        if(vidIndex == (vidLinks.count - 1)) vidIndex = 0;
+        else ++vidIndex;
+        currentPlaying = [NSURL URLWithString:vidLinks[vidIndex]];
         _localPlayer.player = [AVPlayer playerWithURL:currentPlaying];
         [self playVideoLocally];
         [self disableHomeButton];
         [self.playPauseChanger setImage:[UIImage imageNamed:@"Controls_Pause.png"] forState:UIControlStateNormal];
     }
     else if(_isPlayingOnChromeCast){
-        if(vidIndex == 0) [self enablePrevButton];
-        ++vidIndex;
+        //if(vidIndex == 0) [self enablePrevButton];
+        if(vidIndex == (vidLinks.count - 1)) vidIndex = 0;
+        else ++vidIndex;
         [self castVideo];
-        if(vidIndex == (vidLinks.count - 1)) [self disableNextButton];
+        
     }
 }
 
 - (IBAction)homeBtn:(UIButton *)sender {
+    [self deviceDisconnected];
 }
 
 - (IBAction)castBtn:(UIButton *)sender {
@@ -290,12 +292,12 @@ float GCvol;
 
 -(void)disableHomeButton{
     self.homeDisabler.enabled = NO;
-    self.homeView.layer.backgroundColor = [UIColor blackColor].CGColor;
+    [self.homeDisabler setImage:nil forState:UIControlStateNormal];
 }
 
 -(void)enableHomeButton{
     self.homeDisabler.enabled = YES;
-    self.homeView.layer.backgroundColor = [UIColor saffronYellow].CGColor;
+    [self.homeDisabler setImage:[UIImage imageNamed:@"home.png"]  forState:UIControlStateNormal];
 }
 //--------------------------------------------CHROMECAST-----------------------------------------------------//
 
