@@ -52,6 +52,7 @@ float GCvol;
     [self loadVideoLinks];
     //unsigned long size = vidLinks.count;
     //NSLog(@"%ld", size);
+
     
     kReceiverAppID= kGCKMediaDefaultReceiverApplicationID;
     // Establish filter criteria.
@@ -87,12 +88,24 @@ float GCvol;
 }
 
 -(void)loadVideoLinks{
-    NSFileManager *fileManager;
-    fileManager = [NSFileManager defaultManager];
-    NSString *bundle = [[NSBundle mainBundle] bundlePath];
-    NSString *pathToDropBox = [bundle stringByAppendingPathComponent:@"dbVidLinks.txt"];
-    NSString *data = [NSString stringWithContentsOfFile:pathToDropBox encoding:NSUTF8StringEncoding error:nil];
-    vidLinks = [data componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    NSURL *url = [NSURL URLWithString:@"https://dl.dropbox.com/s/57iyh3kvis6u1u9/IOTVideos.txt"];
+    NSError* error;
+    NSString *content = [NSString stringWithContentsOfURL:url encoding:NSASCIIStringEncoding error:&error];
+    NSString *myString = nil;
+    NSString * result = @"";
+    NSArray* allLinedStrings =
+    [content componentsSeparatedByCharactersInSet:
+     [NSCharacterSet newlineCharacterSet]];
+    for (NSString* line in allLinedStrings) {
+        if (line.length) {
+            NSString *str = [line stringByReplacingOccurrencesOfString:@"www"withString:@"dl"];
+            str = [str substringToIndex:[str length]-5];
+            //NSLog(@"the new line content is: %@", str);
+            myString = [NSString stringWithFormat:@"%@\r",str];
+            result = [result stringByAppendingString: myString];
+        }
+    }
+    vidLinks = [result componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 }
 
 -(void)playVideoLocally{
@@ -114,7 +127,7 @@ float GCvol;
         //if(vidIndex == (vidLinks.count - 1)) [self enableNextButton];
         if(_localPlayer.player.rate == 1) [_localPlayer.player pause];
     
-        if(vidIndex == 0) vidIndex = vidLinks.count - 1;
+        if(vidIndex == 0) vidIndex = vidLinks.count - 2;
         else --vidIndex;
         currentPlaying = [NSURL URLWithString:vidLinks[vidIndex]];
         _localPlayer.player = [AVPlayer playerWithURL:currentPlaying];
@@ -124,7 +137,7 @@ float GCvol;
         [self.playPauseChanger setImage:[UIImage imageNamed:@"Controls_Pause.png"] forState:UIControlStateNormal];
     }
     else if(_isPlayingOnChromeCast){
-        if(vidIndex == 0) vidIndex = vidLinks.count - 1;
+        if(vidIndex == 0) vidIndex = vidLinks.count - 2;
         else --vidIndex;
         [self castVideo];
     }
@@ -177,7 +190,7 @@ float GCvol;
         if(_localPlayer.player.rate == 1) [_localPlayer.player pause];
         //if(vidIndex == 0) [self enablePrevButton];
         
-        if(vidIndex == (vidLinks.count - 1)) vidIndex = 0;
+        if(vidIndex == (vidLinks.count - 2)) vidIndex = 0;
         else ++vidIndex;
         currentPlaying = [NSURL URLWithString:vidLinks[vidIndex]];
         _localPlayer.player = [AVPlayer playerWithURL:currentPlaying];
@@ -187,7 +200,7 @@ float GCvol;
     }
     else if(_isPlayingOnChromeCast){
         //if(vidIndex == 0) [self enablePrevButton];
-        if(vidIndex == (vidLinks.count - 1)) vidIndex = 0;
+        if(vidIndex == (vidLinks.count - 2)) vidIndex = 0;
         else ++vidIndex;
         [self castVideo];
         
